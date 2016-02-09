@@ -1,0 +1,68 @@
+<template name="survey3">
+	<div class="black-break"></div>
+	    	<div class="how-it-works red-bg">
+	    		<div class="meter">
+				  <span style="width: 18.75%; float:left"></span>
+				  <p style="float:right; left:50px; position:relative">3/16</p>
+				</div>
+	    	</div>
+	    <div class="gray-space survey-text">
+	    	<p>Which of the following best describes you?</p>
+	    	<div class="radio">
+			  <label>
+			    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+			    Executive Director or Senior Management
+			  </label>
+			</div>
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+			    Other employee at my organization
+			  </label>
+			</div>
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+			    Consultant
+			  </label>
+			</div>
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+			    Academic researcher
+			  </label>
+			</div>
+
+			<p>Which of the following best describes the organization you are filling this survey out about?</p>
+
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="optionsRadios2" id="optionsRadios1" value="option2" checked>
+			    Nonprofit Organization
+			  </label>
+			</div>
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="optionsRadios2" id="optionsRadios1" value="option2" checked>
+			    For Profit Organization
+			  </label>
+			</div>
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="optionsRadios2" id="optionsRadios1" value="option2" checked>
+			    University or Research Institute
+			  </label>
+			</div>
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="optionsRadios2" id="optionsRadios1" value="option2" checked>
+			    Other
+			  </label>
+			</div>	    	
+
+	    	<a href="/survey2"><button class="prev-button">&lt; Back</button></a>
+	    	<a href="/survey4"><button class="next-button">Next ></button></a>
+	    	<div class="clear"></div>
+	    </div>
+	    {{> footer}}
+</template>
