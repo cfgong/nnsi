@@ -10,6 +10,7 @@ Router.route('/register');
 Router.route('/survey');
 Router.route('/logout');
 Router.route('/login');
+Router.route('/deadend');
 
 Router.route('/survey2');
 Router.route('/survey3');
@@ -26,3 +27,8 @@ Router.route('/survey13');
 Router.route('/survey14');
 Router.route('/survey15');
 Router.route('/survey16');
+Router.route('/complete');
+Router.route('/results');
+Router.route('/thankyou');
+
+

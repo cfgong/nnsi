@@ -5,6 +5,12 @@ Template.register.events({
 		var organization = $('[name=organization').val();
 		var password = $('[name=password]').val();
 		var confirmpassword = $('[name=confirmpassword').val();
+
+		console.log("Initiated Register process");
+		console.log("email is " + email);
+		console.log("org is " + organization);
+		console.log("pw is " + password);
+		console.log("2ndpw is " + confirmpassword);
 		Accounts.createUser({
 			email:email,
 			organization: organization,
@@ -21,26 +27,4 @@ Template.register.events({
 	}
 });
 
-Template.logout.events({
-	'click .logout': function(event){
-		event.preventDefault();
-		Meteor.logout();
-		Router.go('/');
-	}
-})
-
-Template.login.events({
-	'submit form': function(event){
-		event.preventDefault();
-		var email = $('[name=email]').val();
-		var password = $('[name=password]').val();
-		Meteor.loginWithPassword(email, password, function(error){
-			if(error){
-				console.log(error.reason);
-			}else{
-				Router.go('/survey');
-			}
-		});
-	}
-});
 

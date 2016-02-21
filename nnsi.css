@@ -1,7 +1,7 @@
 /* CSS declarations go here */
 body{
 	color:white;
-	font-family: Oswald;
+	font-family: "Oswald", "Source Sans Pro";
 }
 
 p{
@@ -15,7 +15,7 @@ footer p{
 	float:right;
 }
 .bg-img {
-  font-family: sans-serif;
+  /*font-family: sans-serif;*/
   background-image: url("/General/NetworkMap.png");
   background-size: auto;
   background-repeat: repeat;
@@ -23,6 +23,14 @@ footer p{
   overflow:auto;
 }
 
+#goHome{
+	text-decoration:none !important;
+}
+#goHome:hover{
+	color:white;
+	text-decoration: none !important;
+	cursor: pointer;
+}
 #fix-top{
 	position: relative;
 	top:-10px;
@@ -38,7 +46,7 @@ footer p{
 }
 
 .title h5{
-	padding-left:150px;
+	padding-left:170px;
 	position: relative;
 	top: -30px;
 }
@@ -54,8 +62,9 @@ footer p{
 
 .ic-row{
 	height:250px;
-	width:103%;
+	width:100%;
 	padding-top:150px;
+	margin-left:4%;
 }
 .ic-row .row{
 	float:left;
@@ -64,10 +73,12 @@ footer p{
 
 .nonprofit-capacity-is {
 	background-color:#8399a1;
+	padding: 20px;
 }
 .eight-dimensions{
 	background-color:#574e4f;
-	height:300px;
+	height:200px;
+	padding: 20px;
 }
 
 .eight-dimensions .row{
@@ -77,15 +88,29 @@ footer p{
 
 .red-bg {
 	background-color: #965F5C;
-	/*height: 150px;*/
-	padding:20px;
+	padding:30px;
 }
 
 .buttons{
 	text-align:center;
+	padding: 30px;
+}
+
+.home-button{
+	padding:5px 10px;
+	border: 2px solid blue;
+	background-color: white;
+}
+
+.home-button:hover{
+	cursor: pointer;
 }
 
 .register-form{
+	text-align:center;
+}
+
+.login-form{
 	text-align:center;
 }
 
@@ -127,7 +152,7 @@ footer p{
 }
 
 .survey-text p{
-	padding:30px 25px;
+	padding:0px 24px;
 }
 
 .meter { 
@@ -167,6 +192,13 @@ footer p{
 	width:96%;
 	margin: 0 auto;
 }
+.vertical-divider {
+	position: absolute;
+	left:49%;
+	top:58%;
+	bottom: -29%;
+	border-left:2px solid black;
+}
 
 .radio label{
 	padding-left:15%;
@@ -180,6 +212,21 @@ footer p{
 .inline-textform{
 	margin-left:200px;
 	width:450px;
+}
+.radio-survey label{
+	display: inline;
+	padding-right: 12%;
+}
+
+.horizontal-list{
+	list-style-type:none; 
+	margin:0; 
+	padding:0;
+}
+
+.horizontal-list li{
+	float:left;
+	padding-right:40px;
 }
 
 
