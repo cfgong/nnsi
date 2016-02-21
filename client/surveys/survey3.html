@@ -6,29 +6,29 @@
 				  <p style="float:right; left:50px; position:relative">3/16</p>
 				</div>
 	    	</div>
-	    <div class="gray-space survey-text">
+	    <form class="gray-space survey-text">
 	    	<p>Which of the following best describes you?</p>
 	    	<div class="radio">
 			  <label>
-			    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+			    <input type="radio" name="whoareyou" id="optionsRadios1" value="Executive Director or Senior Management" checked>
 			    Executive Director or Senior Management
 			  </label>
 			</div>
 			<div class="radio">
 			  <label>
-			    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+			    <input type="radio" name="whoareyou" id="optionsRadios1" value="Other employee at my organization" >
 			    Other employee at my organization
 			  </label>
 			</div>
 			<div class="radio">
 			  <label>
-			    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+			    <input type="radio" name="whoareyou" id="optionsRadios1" value="Consultant" >
 			    Consultant
 			  </label>
 			</div>
 			<div class="radio">
 			  <label>
-			    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+			    <input type="radio" name="whoareyou" id="optionsRadios1" value="Academic researcher" >
 			    Academic researcher
 			  </label>
 			</div>
@@ -37,32 +37,32 @@
 
 			<div class="radio">
 			  <label>
-			    <input type="radio" name="optionsRadios2" id="optionsRadios1" value="option2" checked>
+			    <input type="radio" name="whoisyourorg" id="optionsRadios1" value="Nonprofit Organization" checked>
 			    Nonprofit Organization
 			  </label>
 			</div>
 			<div class="radio">
 			  <label>
-			    <input type="radio" name="optionsRadios2" id="optionsRadios1" value="option2" checked>
+			    <input type="radio" name="whoisyourorg" id="optionsRadios1" value="For Profit Organization" >
 			    For Profit Organization
 			  </label>
 			</div>
 			<div class="radio">
 			  <label>
-			    <input type="radio" name="optionsRadios2" id="optionsRadios1" value="option2" checked>
+			    <input type="radio" name="whoisyourorg" id="optionsRadios1" value="University or Research Institute" >
 			    University or Research Institute
 			  </label>
 			</div>
 			<div class="radio">
 			  <label>
-			    <input type="radio" name="optionsRadios2" id="optionsRadios1" value="option2" checked>
+			    <input type="radio" name="whoisyourorg" id="optionsRadios1" value="Other" >
 			    Other
 			  </label>
 			</div>	    	
 
 	    	<a href="/survey2"><button class="prev-button">&lt; Back</button></a>
-	    	<a href="/survey4"><button class="next-button">Next ></button></a>
+	    	<input class="next-button" type="submit" value="Next >"/>
 	    	<div class="clear"></div>
-	    </div>
+	    </form>
 	    {{> footer}}
 </template>
