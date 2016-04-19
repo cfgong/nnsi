@@ -6,29 +6,29 @@
 				  <p style="float:right; left:50px; position:relative">5/16</p>
 				</div>
 	    	</div>
-	    <div class="gray-space survey-text">
-	    	<div class="container">
+	    <form class="gray-space survey-text">
+	    	<div style="padding-top:2%;" class="container black">
 	    		<div class="row">
 	    			<label class="inline-display" for="budget">What is your organization's yearly budget?</label>
-  					<input class="inline-textform" type="text"><br>
+  					<input style="position:relative; left:10%;" class="inline-textform" name="budget" type="text"><br>
 	    		</div>
 	    		<div class="row">
-	    			<label class="inline-display" for="budget">What was your organization's revenue last year?</label>
-  					<input class="inline-textform" type="text"><br>
+	    			<label class="inline-display" for="revenue">What was your organization's revenue last year?</label>
+  					<input style="position:relative; left:8.5%;" class="inline-textform" name="revenue" type="text"><br>
 	    		</div>
 	    		<div class="row">
-	    			<label class="inline-display" for="budget">What was the valuation of your organization's assets at the end of last year?</label>
-  					<input class="inline-textform" type="text"><br>
+	    			<label class="inline-display" for="assets">What was the valuation of your organization's assets at the end of last year?</label>
+  					<input style="position:relative; left:-5%;" class="inline-textform" name="assets" type="text"><br>
 	    		</div>
 	    		<div class="row">
-	    			<label class="inline-display" for="budget">Please select the currency: </label>
-  					<input class="inline-textform" type="text"><br>
+	    			<label class="inline-display" for="currency">Please select the currency: </label>
+  					<input style="position:relative; left:18%;" class="inline-textform" name="currency" type="text"><br>
 	    		</div>
 	    	</div>
 	    	
 	    	<a href="/survey4"><button class="prev-button">&lt; Back</button></a>
-	    	<a href="/survey6"><button class="next-button">Next ></button></a>
+	    	<input class="next-button" type="submit" value="Next >"/>
 	    	<div class="clear"></div>
-	    </div>
+	    </form>
 	    {{> footer}}
 </template>

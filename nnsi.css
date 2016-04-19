@@ -14,6 +14,13 @@ footer {
 footer p{
 	float:right;
 }
+
+.black {
+	color: black;
+}
+.white {
+	color: white;
+}
 .bg-img {
   /*font-family: sans-serif;*/
   background-image: url("/General/NetworkMap.png");
@@ -195,16 +202,24 @@ footer p{
 .vertical-divider {
 	position: absolute;
 	left:49%;
-	top:58%;
-	bottom: -29%;
+	top:37%;
+	bottom: 17%;
 	border-left:2px solid black;
 }
 
-.radio label{
+/*.radio label{
 	padding-left:15%;
 	color:black;
+}*/
+
+.radio, .checkbox {
+	color:black;
+	padding-left:15%;
 }
 
+.region {
+
+}
 .inline-display{
 	display:inline;
 	padding-left:50px;
@@ -235,5 +250,14 @@ footer p{
 	height:300px;
 	width:90%;
 	margin: auto;
+}
+
+.navbar-complete {
+	background-color: #8399a1;
+}
+
+.navbar-complete .span4 {
+	padding: 10px 0px 10px 0px;
+	text-align: center;
 }
 

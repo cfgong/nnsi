@@ -1,0 +1,326 @@
+{
+  "format": "web-program-pre1",
+  "manifest": [
+    {
+      "path": "ed5d9aa9116f36a3c1e3e8270b651d692cac51f7.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/ed5d9aa9116f36a3c1e3e8270b651d692cac51f7.js?meteor_js_resource=true",
+      "size": 674917,
+      "hash": "ed5d9aa9116f36a3c1e3e8270b651d692cac51f7"
+    },
+    {
+      "path": "2665dc77c9f573f48b56e3a5d1c47a850b6e8e9f.css",
+      "where": "client",
+      "type": "css",
+      "cacheable": true,
+      "url": "/2665dc77c9f573f48b56e3a5d1c47a850b6e8e9f.css?meteor_css_resource=true",
+      "size": 135702,
+      "hash": "2665dc77c9f573f48b56e3a5d1c47a850b6e8e9f"
+    },
+    {
+      "path": "packages/bootstrap/img/glyphicons-halflings.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/packages/bootstrap/img/glyphicons-halflings.png",
+      "size": 12799,
+      "hash": "84f613631b07d4fe22acbab50e551c0fe04bd78b"
+    },
+    {
+      "path": "packages/bootstrap/img/glyphicons-halflings-white.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/packages/bootstrap/img/glyphicons-halflings-white.png",
+      "size": 8777,
+      "hash": "a25c4705320fd63c33790e666872910e702b9bf6"
+    },
+    {
+      "path": "app/General/ColorPallete.PNG",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/General/ColorPallete.PNG",
+      "size": 355834,
+      "hash": "f32002be5636f04fd81e0a24643e0ee14212755d"
+    },
+    {
+      "path": "app/General/Logo.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/General/Logo.png",
+      "size": 25293,
+      "hash": "17d624e9c9f3e60cc787974c2d1cef33a4ae5b97"
+    },
+    {
+      "path": "app/General/LogoTransparent.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/General/LogoTransparent.png",
+      "size": 61187,
+      "hash": "4db606ca5e51bbd7ea34ae01f5ebc9639fae36e6"
+    },
+    {
+      "path": "app/General/LogoTransparentSmall.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/General/LogoTransparentSmall.png",
+      "size": 5790,
+      "hash": "fefcd145e6115d630f3dc7ad587836194f64f768"
+    },
+    {
+      "path": "app/General/NetworkMap.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/General/NetworkMap.png",
+      "size": 93261,
+      "hash": "2df39fc0a02d8e022b8529ebf8f79793d7ac167e"
+    },
+    {
+      "path": "app/General/NetworkMapTiled.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/General/NetworkMapTiled.png",
+      "size": 3041492,
+      "hash": "9d3b8bdadbba3a0d3bab0fc212e1f0a2ba43ef74"
+    },
+    {
+      "path": "app/General/NewLogoF2.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/General/NewLogoF2.png",
+      "size": 35035,
+      "hash": "f15a931ec7addc169258ae861b1de2114649ae25"
+    },
+    {
+      "path": "app/Homepage/Icon1.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/Homepage/Icon1.png",
+      "size": 3518,
+      "hash": "97859814523e55c29a1ca352ef63da815667c0c3"
+    },
+    {
+      "path": "app/Homepage/Icon1F.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/Homepage/Icon1F.png",
+      "size": 956,
+      "hash": "f406d63e79916c6f3e493b43919dad3180309de5"
+    },
+    {
+      "path": "app/Homepage/Icon2.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/Homepage/Icon2.png",
+      "size": 7037,
+      "hash": "2c66590f2208c30538fb6c0ac8d1a155f778af4d"
+    },
+    {
+      "path": "app/Homepage/Icon2F.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/Homepage/Icon2F.png",
+      "size": 1640,
+      "hash": "464f9ed2e95b7c46ec1d45c2b97cd1785edaee20"
+    },
+    {
+      "path": "app/Homepage/Icon3.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/Homepage/Icon3.png",
+      "size": 9677,
+      "hash": "1f15b57274231eee82e873b29d4bf1d38fb0e0a9"
+    },
+    {
+      "path": "app/Homepage/Icon3F.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/Homepage/Icon3F.png",
+      "size": 1818,
+      "hash": "d9ddba972794471a7325618d3181cb0df8d34bb8"
+    },
+    {
+      "path": "app/Homepage/Icon4.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/Homepage/Icon4.png",
+      "size": 5576,
+      "hash": "d16917981c2c32ac6337eab68913d528fbe8ecce"
+    },
+    {
+      "path": "app/Homepage/Icon4F.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/Homepage/Icon4F.png",
+      "size": 1415,
+      "hash": "f86209145ed6f55820f2f96944ba4d69e47bccd4"
+    },
+    {
+      "path": "app/MainIcons/AdaptiveCapacity.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/MainIcons/AdaptiveCapacity.png",
+      "size": 8826,
+      "hash": "09906fcceb877008e031c749d6af753127df633f"
+    },
+    {
+      "path": "app/MainIcons/AdaptiveCapacityT.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/MainIcons/AdaptiveCapacityT.png",
+      "size": 8774,
+      "hash": "6c2be190e6cecd892c72391252701e3d0ce187b4"
+    },
+    {
+      "path": "app/MainIcons/BoardLeadership.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/MainIcons/BoardLeadership.png",
+      "size": 10544,
+      "hash": "88035bba0a7d5fcfe1b6f6375f83c4c9727e5b8f"
+    },
+    {
+      "path": "app/MainIcons/BoardLeadershipT.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/MainIcons/BoardLeadershipT.png",
+      "size": 9620,
+      "hash": "bfc387c1af59f68ead1eece09c697a5ccea04e21"
+    },
+    {
+      "path": "app/MainIcons/ExternalCommunication.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/MainIcons/ExternalCommunication.png",
+      "size": 7406,
+      "hash": "1748376946fd794aba1a2b1b2ecbeb06dc784d84"
+    },
+    {
+      "path": "app/MainIcons/ExternalCommunicationT.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/MainIcons/ExternalCommunicationT.png",
+      "size": 7734,
+      "hash": "161cd516d59991bb35e6711b48a4b29a22c10c80"
+    },
+    {
+      "path": "app/MainIcons/FinancialManagement.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/MainIcons/FinancialManagement.png",
+      "size": 4609,
+      "hash": "652c809f345c6990b1fb42991bf24e4d2416ec99"
+    },
+    {
+      "path": "app/MainIcons/FinancialManagementT.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/MainIcons/FinancialManagementT.png",
+      "size": 2090,
+      "hash": "661010b5438254a2056a69cb91c8b133060c714a"
+    },
+    {
+      "path": "app/MainIcons/MissionOrientation.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/MainIcons/MissionOrientation.png",
+      "size": 7767,
+      "hash": "e0860249cc8e24f31a76c93e9cc3772611cf9f6e"
+    },
+    {
+      "path": "app/MainIcons/MissionOrientationT.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/MainIcons/MissionOrientationT.png",
+      "size": 9226,
+      "hash": "01f887758fb7426ad66c491d9a28febe420eb88f"
+    },
+    {
+      "path": "app/MainIcons/OperationalCapacity.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/MainIcons/OperationalCapacity.png",
+      "size": 7256,
+      "hash": "8bc9782311fe1e816f3b3ef65ee88bad42586d7b"
+    },
+    {
+      "path": "app/MainIcons/OperationalCapacityT.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/MainIcons/OperationalCapacityT.png",
+      "size": 6777,
+      "hash": "57ad1377193f2c79b0e41fba2b785957dc056253"
+    },
+    {
+      "path": "app/MainIcons/StaffManagement.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/MainIcons/StaffManagement.png",
+      "size": 6742,
+      "hash": "e4cda885d2d0e42e974130278f02dcd71069af1c"
+    },
+    {
+      "path": "app/MainIcons/StaffManagementT.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/MainIcons/StaffManagementT.png",
+      "size": 7665,
+      "hash": "59f25cc8e182b7964a42bfb430e8ef41a5ed33e2"
+    },
+    {
+      "path": "app/MainIcons/StrategicPlanning.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/MainIcons/StrategicPlanning.png",
+      "size": 8306,
+      "hash": "8d3566594dedcd0b8fd4504f4bd504461a6cf547"
+    },
+    {
+      "path": "app/MainIcons/StrategicPlanningT.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/MainIcons/StrategicPlanningT.png",
+      "size": 8745,
+      "hash": "e3216d4f0e792ae253541721302c685f784f4bbe"
+    },
+    {
+      "path": "head.html",
+      "where": "internal",
+      "type": "head",
+      "hash": "830be83b30dc7ad05630d9e3f5b8628f017ba854"
+    }
+  ]
+}

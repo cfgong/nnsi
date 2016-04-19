@@ -1,4 +1,31 @@
 <template name="results">
-	
+	<div class="black-break"></div>
+	<div class="navbar-complete black">
+		<div class="container">
+			<div class="row">
+				<div class="span4">About the Study</div>
+				<div class="span4 white">Your Results</div>
+				<div class="span4">The Eight Dimensions</div>
+			</div>
+		</div>
+	</div>
+	<div class="black-break"></div>
+	    	
+	    <div style="padding:10px 20px 0px 20px" class="gray-space black">
+	    	<p>Nonprofit capacity refers to the processes, practices, and people that the organization has at its disposal that enable it to produce, perform, or deploy resources to achieve its mission. Your organization was scored on eight dimensions of nonprofity capacity.</p>
+
+	    	<h4>How You Performed:</h4>
+	    		<p>{{rawScore}}</p>
+	    	<h4>How You Compare:</h4>
+
+	    	<h4>Your Strengths</h4>
+
+	    	<h4>Your Weaknesses</h4>
+
+	    	<a href="/complete"><button class="prev-button">&lt; Back</button></a>
+	    	<a href="/thankyou"><button class="next-button">Next ></button></a>
+	    	<div class="clear"></div>
+	    </div>
+	    {{> footer}}
 
 </template>

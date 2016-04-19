@@ -31,4 +31,12 @@ Router.route('/complete');
 Router.route('/results');
 Router.route('/thankyou');
 
+Router.route('/adaptiveCapacity');
+Router.route('/operationalCapacity');
+Router.route('/missionOrientation');
+Router.route('/financialManagement');
+Router.route('/externalCommunication');
+Router.route('/staffManagement');
+Router.route('/strategicPlanning');
+Router.route('/boardLeadership');
 

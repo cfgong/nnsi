@@ -19,11 +19,12 @@ Template.register.events({
 		}, function(error){
 			if(error){
 				console.log(error.reason);
+				Router.go('/login');
 			}else{
-				Router.go('/survey');
+				Router.go('/login');
 			}
 		});
-		Router.go('/survey');
+		//Router.go('/survey');
 	}
 });
 

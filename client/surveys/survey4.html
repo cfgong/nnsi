@@ -6,84 +6,84 @@
 				  <p style="float:right; left:50px; position:relative">4/16</p>
 				</div>
 	    	</div>
-	    <div class="gray-space survey-text">
+	    <form class="gray-space survey-text">
 	    	<div class="container row">
 	    		<div class="span5">	
 	    	<p>Where is your organization's primary address (the main address for correspondence) located?</p>
 	    	<div class="radio">
 			  <label>
-			    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+			    <input type="radio" name="address" id="optionsRadios1" value="Europe" checked>
 			    Europe
 			  </label>
 			</div>
 			<div class="radio">
 			  <label>
-			    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+			    <input type="radio" name="address" id="optionsRadios1" value="Asia">
 			    Asia
 			  </label>
 			</div>
 			<div class="radio">
 			  <label>
-			    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+			    <input type="radio" name="address" id="optionsRadios1" value="Africa">
 			    Africa
 			  </label>
 			</div>
 			<div class="radio">
 			  <label>
-			    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+			    <input type="radio" name="address" id="optionsRadios1" value="North America">
 			    North America
 			  </label>
 			</div>
 			<div class="radio">
 			  <label>
-			    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+			    <input type="radio" name="address" id="optionsRadios1" value="Australia/Oceania">
 			    Australia/Oceania
 			  </label>
 			</div>
 			<div class="radio">
 			  <label>
-			    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+			    <input type="radio" name="address" id="optionsRadios1" value="South America">
 			    South America
 			  </label>
 			</div>
 				</div>
 			
-			<div class="span6">
+			<div class="span6 region">
 			<p>Please specify all of the regions in which your organization operates.</p>
 
 			<div class="checkbox">
 			  <label>
-			    <input type="checkbox" value="">
+			    <input type="checkbox" value="Europe">
 			    Europe
 			  </label>
 			</div>
 			<div class="checkbox">
 			  <label>
-			    <input type="checkbox" value="">
+			    <input type="checkbox" value="Asia">
 			    Asia
 			  </label>
 			</div>
 			<div class="checkbox">
 			  <label>
-			    <input type="checkbox" value="">
+			    <input type="checkbox" value="Africa">
 			    Africa
 			  </label>
 			</div>	
 			<div class="checkbox">
 			  <label>
-			    <input type="checkbox" value="">
+			    <input type="checkbox" value="North America">
 			    North America
 			  </label>
 			</div>	
 			<div class="checkbox">
 			  <label>
-			    <input type="checkbox" value="">
+			    <input type="checkbox" value="Australia/Oceania">
 			    Australia/Oceania
 			  </label>
 			</div>	
 			<div class="checkbox">
 			  <label>
-			    <input type="checkbox" value="">
+			    <input type="checkbox" value="South America">
 			   South America
 			  </label>
 			</div>	
@@ -91,8 +91,8 @@
 			<!-- end of container div -->
 			</div>
 	    	<a href="/survey3"><button class="prev-button">&lt; Back</button></a>
-	    	<a href="/survey5"><button class="next-button">Next ></button></a>
+	    	<input class="next-button" type="submit" value="Next >"/>
 	    	<div class="clear"></div>
-	    </div>
+	    </form>
 	    {{> footer}}
 </template>

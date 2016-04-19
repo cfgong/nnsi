@@ -6,7 +6,7 @@
 				  <p style="float:right; left:50px; position:relative">13/16</p>
 				</div>
 	    	</div>
-	    <div class="gray-space survey-text">
+	    <form class="gray-space survey-text">
 	    	<div class="container">
 	    		<p>For the following statements, please select the answer that best represents your personal assessment about your organization.</p>
 	    		<div class="row">
@@ -23,52 +23,52 @@
 	    			</div>
 	    		</div>
 	    		<div class="divider"></div>
-	    		<div class="vertical-divider"></div>
+	    		<div class="vertical-divider" style="top:33%; bottom:49%"></div>
 
 	    		<div class="row">
 	    			<div class="span6"><p>The board periodically sets aside time to learn more about important issues facing organizations like this one.</p></div>
 	    			<div class="span6 radio-survey">
 	    				<label class="radio-inline">
-						  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+						  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1">
 						</label>
 						<label class="radio-inline">
-						  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+						  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2">
 						</label>
 						<label class="radio-inline">
-						  <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+						  <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3">
 						</label>
 						<label class="radio-inline">
-						  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 
+						  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="4"> 
 						</label>
 						<label class="radio-inline">
-						  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 
+						  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="0"> 
 						</label>
 						<label class="radio-inline">
-						  <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 
+						  <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="0"> 
 						</label>
 	    			</div>
 	    		</div>
 
 	    		<div class="row">
-	    			<div class="span6"><p>The board learns from its mitsakes.</p></div>
+	    			<div class="span6"><p>The board learns from its mistakes.</p></div>
 	    			<div class="span6 radio-survey">
 	    				<label class="radio-inline">
-						  <input type="radio" name="inlineRadioOptions2" id="inlineRadio1" value="option1">
+						  <input type="radio" name="inlineRadioOptions2" id="inlineRadio1" value="1">
 						</label>
 						<label class="radio-inline">
-						  <input type="radio" name="inlineRadioOptions2" id="inlineRadio2" value="option2">
+						  <input type="radio" name="inlineRadioOptions2" id="inlineRadio2" value="2">
 						</label>
 						<label class="radio-inline">
-						  <input type="radio" name="inlineRadioOptions2" id="inlineRadio3" value="option3">
+						  <input type="radio" name="inlineRadioOptions2" id="inlineRadio3" value="3">
 						</label>
 						<label class="radio-inline">
-						  <input type="radio" name="inlineRadioOptions2" id="inlineRadio1" value="option1"> 
+						  <input type="radio" name="inlineRadioOptions2" id="inlineRadio1" value="4"> 
 						</label>
 						<label class="radio-inline">
-						  <input type="radio" name="inlineRadioOptions2" id="inlineRadio2" value="option2"> 
+						  <input type="radio" name="inlineRadioOptions2" id="inlineRadio2" value="0"> 
 						</label>
 						<label class="radio-inline">
-						  <input type="radio" name="inlineRadioOptions2" id="inlineRadio3" value="option3"> 
+						  <input type="radio" name="inlineRadioOptions2" id="inlineRadio3" value="0"> 
 						</label>
 	    			</div>
 	    		</div>
@@ -77,8 +77,8 @@
 	    	</div>
 	    	
 	    	<a href="/survey12"><button class="prev-button">&lt; Back</button></a>
-	    	<a href="/survey14"><button class="next-button">Next ></button></a>
+	    	<input class="next-button" type="submit" value="Next >"/>
 	    	<div class="clear"></div>
-	    </div>
+	    </form>
 	    {{> footer}}
 </template>
