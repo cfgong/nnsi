@@ -1,0 +1,80 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'demeteorizer@next' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.36
+4 verbose cache add [ 'demeteorizer@next', null ]
+5 verbose cache add name=undefined spec="demeteorizer@next" args=["demeteorizer@next",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'demeteorizer@next',
+6 verbose parsed url   path: 'demeteorizer@next',
+6 verbose parsed url   href: 'demeteorizer@next' }
+7 verbose cache add name="demeteorizer" spec="next" args=["demeteorizer","next"]
+8 verbose parsed url { protocol: null,
+8 verbose parsed url   slashes: null,
+8 verbose parsed url   auth: null,
+8 verbose parsed url   host: null,
+8 verbose parsed url   port: null,
+8 verbose parsed url   hostname: null,
+8 verbose parsed url   hash: null,
+8 verbose parsed url   search: null,
+8 verbose parsed url   query: null,
+8 verbose parsed url   pathname: 'next',
+8 verbose parsed url   path: 'next',
+8 verbose parsed url   href: 'next' }
+9 verbose addNamed [ 'demeteorizer', 'next' ]
+10 verbose addNamed [ null, null ]
+11 silly lockFile 85ea3cdd-demeteorizer-next demeteorizer@next
+12 verbose lock demeteorizer@next /Users/edwardhu/.npm/85ea3cdd-demeteorizer-next.lock
+13 info addNameTag [ 'demeteorizer', 'next' ]
+14 verbose request where is /demeteorizer
+15 verbose request registry https://registry.npmjs.org/
+16 verbose request id e1bc577448b9a203
+17 verbose url raw /demeteorizer
+18 verbose url resolving [ 'https://registry.npmjs.org/', './demeteorizer' ]
+19 verbose url resolved https://registry.npmjs.org/demeteorizer
+20 verbose request where is https://registry.npmjs.org/demeteorizer
+21 info trying registry request attempt 1 at 22:51:48
+22 verbose etag "1DN3AY1U45RR6RDFITAI81PL3"
+23 http GET https://registry.npmjs.org/demeteorizer
+24 http 304 https://registry.npmjs.org/demeteorizer
+25 silly registry.get cb [ 304,
+25 silly registry.get   { date: 'Tue, 26 Apr 2016 03:51:48 GMT',
+25 silly registry.get     via: '1.1 varnish',
+25 silly registry.get     'cache-control': 'max-age=300',
+25 silly registry.get     etag: '"1DN3AY1U45RR6RDFITAI81PL3"',
+25 silly registry.get     age: '0',
+25 silly registry.get     connection: 'keep-alive',
+25 silly registry.get     'x-served-by': 'cache-dfw1835-DFW',
+25 silly registry.get     'x-cache': 'MISS',
+25 silly registry.get     'x-cache-hits': '0',
+25 silly registry.get     'x-timer': 'S1461642708.451217,VS0,VE323',
+25 silly registry.get     vary: 'Accept-Encoding' } ]
+26 verbose etag https://registry.npmjs.org/demeteorizer from cache
+27 silly lockFile 85ea3cdd-demeteorizer-next demeteorizer@next
+28 silly lockFile 85ea3cdd-demeteorizer-next demeteorizer@next
+29 error notarget No compatible version found: demeteorizer@'next'
+29 error notarget Valid install targets:
+29 error notarget ["0.1.0","0.2.0","0.2.1","0.2.2","0.2.3","0.2.4","0.2.5","0.2.6","0.2.7","0.2.8","0.2.9","0.3.0","0.3.1","0.3.2","0.4.0","0.5.0","0.6.0","0.6.1","0.7.0","0.8.0","0.8.1","0.9.0","1.0.0","1.0.1","1.0.2","1.0.3","2.0.0","2.0.1","2.0.2","2.0.3","2.0.4","2.0.5","2.0.6","2.1.0","2.1.1","2.1.2","2.1.3","2.2.0","2.2.1","2.2.2","2.2.3","2.2.4","2.2.5","2.2.6","2.2.7","2.2.8","2.2.9","2.2.10","2.3.0","2.3.1","3.0.0-alpha.1","3.0.0-alpha.2","3.0.0-alpha.3","3.0.0-alpha.4","3.0.0-alpha.5","3.0.0-beta.1","3.0.0-beta.2","3.0.0-beta.3","3.0.0","3.0.1","3.1.0"]
+29 error notarget
+29 error notarget This is most likely not a problem with npm itself.
+29 error notarget In most cases you or one of your dependencies are requesting
+29 error notarget a package version that doesn't exist.
+30 error System Darwin 15.4.0
+31 error command "/usr/local/bin/node" "/usr/local/bin/npm" "install" "-g" "demeteorizer@next"
+32 error cwd /Users/edwardhu/Documents/nnsi
+33 error node -v v0.10.36
+34 error npm -v 1.4.28
+35 error code ETARGET
+36 verbose exit [ 1, true ]

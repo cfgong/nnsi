@@ -28,13 +28,15 @@ Template.login.events({
 				}
 			}
 			else{
-				if(user && !isVerified){
-						$("#incorrect").text("Please check your email and verify your email");
-						$("#incorrect").show();
-				}else{
-					console.log("login successful with: " + email);
+				// if(user && !isVerified){
+				// 		$("#incorrect").text("Please check your email and verify your email");
+				// 		$("#incorrect").show();
+				// }else{
+				// 	console.log("login successful with: " + email);
+				// 	Router.go('/survey');
+				// }
+				console.log("login successful with: " + email);
 					Router.go('/survey');
-				}
 				
 			}
 		});

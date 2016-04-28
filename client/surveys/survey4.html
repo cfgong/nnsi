@@ -1,4 +1,6 @@
 <template name="survey4">
+{{test}}
+{{primaryAddress}}
 	<div class="black-break"></div>
 	    	<div class="how-it-works red-bg">
 	    		<div class="meter">
@@ -12,7 +14,7 @@
 	    	<p>Where is your organization's primary address (the main address for correspondence) located?</p>
 	    	<div class="radio">
 			  <label>
-			    <input type="radio" name="address" id="optionsRadios1" value="Europe" checked>
+			    <input type="radio" name="address" id="optionsRadios1" value="Europe" >
 			    Europe
 			  </label>
 			</div>
@@ -53,7 +55,7 @@
 
 			<div class="checkbox">
 			  <label>
-			    <input type="checkbox" value="Europe">
+			    <input type="checkbox" value="Europe" >
 			    Europe
 			  </label>
 			</div>
@@ -95,4 +97,8 @@
 	    	<div class="clear"></div>
 	    </form>
 	    {{> footer}}
+}
+}
+}
+}
 </template>
