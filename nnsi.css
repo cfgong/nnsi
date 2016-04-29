@@ -15,6 +15,13 @@ footer p{
 	float:right;
 }
 
+.table th, .table td{
+	padding:4px;
+}
+.table .meter{
+	background-color: lightblue;
+	height: 15px;
+}
 .black {
 	color: black;
 }

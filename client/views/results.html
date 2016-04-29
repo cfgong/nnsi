@@ -14,13 +14,91 @@
 	    <div style="padding:10px 20px 0px 20px" class="gray-space black">
 	    	<p>Nonprofit capacity refers to the processes, practices, and people that the organization has at its disposal that enable it to produce, perform, or deploy resources to achieve its mission. Your organization was scored on eight dimensions of nonprofity capacity.</p>
 
-	    	<h4>How You Performed:</h4>
-	    		<p>{{rawScore}}</p>
-	    	<h4>How You Compare:</h4>
+	    	<h3>How You Performed:</h3>
+	    		<table class="table table-striped">
+				    <thead>
+				      <tr>
+				        <th></th>
+				        <th>Min = 0</th>
+				        <th>Max = 4</th>
+				      </tr>
+				    </thead>
+				    <tbody>
+				      <tr>
+				        <td>Adaptive Capacity</td>
+				        <td style="width:100%">
+				        	<div class="meter">
+				  				<span style="width: {{adaptiveCapacityScore}}%;"></span>
+							</div>
+				        </td>
+				      </tr>
+				      <tr>
+				        <td>Board Leadership</td>
+				        <td style="width:100%">
+				        	<div class="meter">
+				  				<span style="width: {{boardLeadershipScore}}%;"></span>
+							</div>
+				        </td>
+				      </tr>
+				      <tr>
+				        <td>External Communication</td>
+				        <td style="width:100%">
+				        	<div class="meter">
+				  				<span style="width: {{externalCommunicationScore}}%;"></span>
+							</div>
+				        </td>
+				      </tr>
+				      <tr>
+				        <td>Financial Management</td>
+				        <td style="width:100%">
+				        	<div class="meter">
+				  				<span style="width: {{financialManagementScore}}%;"></span>
+							</div>
+				        </td>
+				      </tr>
+				      <tr>
+				        <td>Mission Orientation</td>
+				        <td style="width:100%">
+				        	<div class="meter">
+				  				<span style="width: {{missionOrientationScore}}%;"></span>
+							</div>
+				        </td>
+				      </tr>
+				      <tr>
+				        <td>Operational Capacity</td>
+				        <td style="width:100%">
+				        	<div class="meter">
+				  				<span style="width: {{operationalCapacityScore}}%;"></span>
+							</div>
+				        </td>
+				      </tr>
+				      <tr>
+				        <td>Staff Management</td>
+				        <td style="width:100%">
+				        	<div class="meter">
+				  				<span style="width: {{staffManagementScore}}%;"></span>
+							</div>
+				        </td>
+				      </tr>
+				      <tr>
+				        <td>Strategic Planning</td>
+				        <td style="width:100%">
+				        	<div class="meter">
+				  				<span style="width: {{startegicPlanningScore}}%;"></span>
+							</div>
+				        </td>
+				      </tr>
+				    </tbody>
+			  </table>
+	    	<h3>How You Compare:</h3>
+	    		
+	    	<h3>Your Strengths</h3>
+	    		<p>Your first strength is X</p>
+	    		<p>Your second strength is X</p>
 
-	    	<h4>Your Strengths</h4>
-
-	    	<h4>Your Weaknesses</h4>
+	    	<h3>Your Weaknesses</h3>
+	    		<p>Your first weakness is X</p>
+	    		<p>Your second weakness is X</p>
 
 	    	<a href="/complete"><button class="prev-button">&lt; Back</button></a>
 	    	<a href="/thankyou"><button class="next-button">Next ></button></a>
