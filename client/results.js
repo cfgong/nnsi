@@ -24,6 +24,31 @@ var weaknesses = {
 	strategicPlanning: "Your organization could improve its ability to set up and carry out long term, realistic plans that reflect your core values and mission, perhaps through breaking up long term goals into short-term steps."
 };
 
+var mapping = {
+	0: "Adaptive Capacity",
+	1: "Board Leadership",
+	2: "External Communication",
+	3: "Financial Management",
+	4: "Mission Orientation",
+	5: "Operational Capacity",
+	6: "Staff Management",
+	7: "Strategic Planning"
+};
+
+var mapping2 = {
+	"Adaptive Capacity": "adaptiveCapacity",
+	"Board Leadership": "boardLeadership",
+	"External Communication": "externalCommunication",
+	"Financial Management": "financialManagement",
+	"Mission Orientation": "missionOrientation",
+	"Operational Capacity" : "operationalCapacity",
+	"Staff Management": "staffManagement",
+	"Strategic Planning": "strategicPlanning"
+};
+var scores = [];
+var scores2 = [];
+var scores3 = [];
+var scores4 = [];
 Template.results.helpers({
 
 	adaptiveCapacityScore: function(){
@@ -33,7 +58,10 @@ Template.results.helpers({
 			adaptiveCapacity = 0;
 		}
 		// console.log("adaptiveCapacity is : " + adaptiveCapacity);
-		return convertToPercentage(adaptiveCapacity);
+		adaptiveCapacity = convertToPercentage(adaptiveCapacity);
+		scores["adaptiveCapacity"] = adaptiveCapacity;
+		Session.set("adaptiveCapacity", adaptiveCapacity);
+		return adaptiveCapacity;
 	},
 	boardLeadershipScore: function(){
 		userID = Meteor.user()._id;
@@ -44,7 +72,10 @@ Template.results.helpers({
 			boardLeadership = 0;
 		}
 		// console.log("boardLeadership is : " + boardLeadership);
-		return convertToPercentage(boardLeadership);
+		boardLeadership = convertToPercentage(boardLeadership);
+		scores["boardLeadership"] = boardLeadership;
+		Session.set("boardLeadership", boardLeadership);
+		return boardLeadership;
 	},
 	externalCommunicationScore: function(){
 		userID = Meteor.user()._id;
@@ -53,7 +84,10 @@ Template.results.helpers({
 			externalCommunication = 0;
 		}
 		// console.log("externalCommunication is : " + externalCommunication);
-		return convertToPercentage(externalCommunication);
+		externalCommunication = convertToPercentage(externalCommunication);
+		scores["externalCommunication"] = externalCommunication;
+		Session.set("externalCommunication",externalCommunication);
+		return externalCommunication;
 	},
 	financialManagementScore: function(){
 		userID = Meteor.user()._id;
@@ -64,7 +98,10 @@ Template.results.helpers({
 			financialManagement = 0;
 		}
 		// console.log("financialManagement is : " + financialManagement);
-		return convertToPercentage(financialManagement);
+		financialManagement = convertToPercentage(financialManagement);
+		scores["financialManagement"] = financialManagement;
+		Session.set("financialManagement", financialManagement);
+		return financialManagement;
 	},
 	missionOrientationScore: function(){
 		userID = Meteor.user()._id;
@@ -73,7 +110,10 @@ Template.results.helpers({
 			missionOrientation = 0;
 		}
 		// console.log("missionOrientation is : " + missionOrientation);
-		return convertToPercentage(missionOrientation);
+		missionOrientation = convertToPercentage(missionOrientation);
+		scores["missionOrientation"] = missionOrientation;
+		Session.set("missionOrientation", missionOrientation);
+		return missionOrientation;
 	},
 	operationalCapacityScore: function(){
 		userID = Meteor.user()._id;
@@ -82,7 +122,10 @@ Template.results.helpers({
 			operationalCapacity = 0;
 		}
 		// console.log("operationalCapacity is : " + operationalCapacity);
-		return convertToPercentage(operationalCapacity);
+		operationalCapacity = convertToPercentage(operationalCapacity);
+		scores["operationalCapacity"] = operationalCapacity;
+		Session.set("operationalCapacity", operationalCapacity);
+		return operationalCapacity;
 	},
 	staffManagementScore: function(){
 		userID = Meteor.user()._id;
@@ -91,7 +134,10 @@ Template.results.helpers({
 			staffManagement = 0;
 		}
 		// console.log("staffManagement is : " + staffManagement);
-		return convertToPercentage(staffManagement);
+		staffManagement = convertToPercentage(staffManagement);
+		scores["staffManagement"] = staffManagement;
+		Session.set("staffManagement", staffManagement);
+		return staffManagement;
 	},
 	strategicPlanningScore: function(){
 		userID = Meteor.user()._id;
@@ -100,8 +146,84 @@ Template.results.helpers({
 			strategicPlanning = 0;
 		}
 		// console.log("strategic_planning is : " + strategicPlanning);
-		return convertToPercentage(strategicPlanning);
-	}
-			// Origin.update({_id:userID}, {$set: {rawScoreAvg: avg} });
+		strategicPlanning = convertToPercentage(strategicPlanning);
+		scores["strategicPlanning"] = strategicPlanning;
+		Session.set("strategicPlanning", strategicPlanning);
+		return strategicPlanning;
+	},
+	firstStrength: function(){
+		scores.push(Session.get("adaptiveCapacity"));
+		scores.push(Session.get("boardLeadership"));
+		scores.push(Session.get("externalCommunication"));
+		scores.push(Session.get("financialManagement"));
+		scores.push(Session.get("missionOrientation"));
+		scores.push(Session.get("operationalCapacity"));
+		scores.push(Session.get("staffManagement"));
+		scores.push(Session.get("strategicPlanning"));
 
-})
+		largest = Math.max.apply(Math, scores);
+		var i = scores.indexOf(largest);
+		name = mapping[i];
+		return name + ". " + strengths[mapping2[name]];
+	},
+	secondStrength: function(){
+		scores2.push(Session.get("adaptiveCapacity"));
+		scores2.push(Session.get("boardLeadership"));
+		scores2.push(Session.get("externalCommunication"));
+		scores2.push(Session.get("financialManagement"));
+		scores2.push(Session.get("missionOrientation"));
+		scores2.push(Session.get("operationalCapacity"));
+		scores2.push(Session.get("staffManagement"));
+		scores2.push(Session.get("strategicPlanning"));
+		largest = Math.max.apply(Math, scores2);
+		var i = scores2.indexOf(largest);
+		scores2.splice(i,1);
+		largest = Math.max.apply(Math, scores2);
+		var j = scores2.indexOf(largest);
+
+		// SPAGETHTTI AF
+		name = mapping[j+1];
+		return name + ". " + strengths[mapping2[name]];
+	},
+	firstWeakness: function(){
+		scores3.push(Session.get("adaptiveCapacity"));
+		scores3.push(Session.get("boardLeadership"));
+		scores3.push(Session.get("externalCommunication"));
+		scores3.push(Session.get("financialManagement"));
+		scores3.push(Session.get("missionOrientation"));
+		scores3.push(Session.get("operationalCapacity"));
+		scores3.push(Session.get("staffManagement"));
+		scores3.push(Session.get("strategicPlanning"));
+
+		smallest = Math.min.apply(Math, scores3);
+		var i = scores3.indexOf(smallest);
+		name = mapping[i];
+		return name + ". " + weaknesses[mapping2[name]];
+	},
+	secondWeakness:function(){
+		scores4.push(Session.get("adaptiveCapacity"));
+		scores4.push(Session.get("boardLeadership"));
+		scores4.push(Session.get("externalCommunication"));
+		scores4.push(Session.get("financialManagement"));
+		scores4.push(Session.get("missionOrientation"));
+		scores4.push(Session.get("operationalCapacity"));
+		scores4.push(Session.get("staffManagement"));
+		scores4.push(Session.get("strategicPlanning"));
+
+		smallest = Math.min.apply(Math, scores4);
+		var i = scores4.indexOf(smallest);
+		scores4.splice(i,1);
+		smallest = Math.min.apply(Math, scores4);
+		var j = scores4.indexOf(smallest);
+
+		// SPAGETHTTI AF
+		name = mapping[j+1];
+		return name + ". " + weaknesses[mapping2[name]];
+	}
+
+			// Origin.update({_id:userID}, {$set: {rawScoreAvg: avg} });
+});
+
+
+
+	

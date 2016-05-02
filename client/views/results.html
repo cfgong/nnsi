@@ -28,7 +28,9 @@
 				        <td>Adaptive Capacity</td>
 				        <td style="width:100%">
 				        	<div class="meter">
-				  				<span style="width: {{adaptiveCapacityScore}}%;"></span>
+				  				<span style="width: {{adaptiveCapacityScore}}%;">
+				  					<!-- <p style="text-align:right; margin-left:20px;">{{adaptiveCapacityScore}}</p> -->
+				  				</span>
 							</div>
 				        </td>
 				      </tr>
@@ -84,21 +86,105 @@
 				        <td>Strategic Planning</td>
 				        <td style="width:100%">
 				        	<div class="meter">
-				  				<span style="width: {{startegicPlanningScore}}%;"></span>
+				  				<span style="width: {{strategicPlanningScore}}%;"></span>
 							</div>
 				        </td>
 				      </tr>
 				    </tbody>
 			  </table>
+
+
 	    	<h3>How You Compare:</h3>
-	    		
+	    		<table class="table table-striped compare">
+				    <thead>
+				      <tr>
+				        <th></th>
+				        <th>Min = 0</th>
+				        <th>Max = 4</th>
+				      </tr>
+				    </thead>
+				    <tbody>
+				      <tr>
+				        <td>Adaptive Capacity</td>
+				        <td style="width:100%">
+				        	<div class="meter">
+				  				<span style="width: {{adaptiveCapacityScore}}%;"></span>
+				  				<span style="width: 50%;"></span>
+							</div>
+				        </td>
+				      </tr>
+				      <tr>
+				        <td>Board Leadership</td>
+				        <td style="width:100%">
+				        	<div class="meter">
+				  				<span style="width: {{boardLeadershipScore}}%;"></span>
+				  				<span style="width: 50%;"></span>
+							</div>
+				        </td>
+				      </tr>
+				      <tr>
+				        <td>External Communication</td>
+				        <td style="width:100%">
+				        	<div class="meter">
+				  				<span style="width: {{externalCommunicationScore}}%;"></span>
+				  				<span style="width: 50%;"></span>
+							</div>
+				        </td>
+				      </tr>
+				      <tr>
+				        <td>Financial Management</td>
+				        <td style="width:100%">
+				        	<div class="meter">
+				  				<span style="width: {{financialManagementScore}}%;"></span>
+				  				<span style="width: 50%;"></span>
+							</div>
+				        </td>
+				      </tr>
+				      <tr>
+				        <td>Mission Orientation</td>
+				        <td style="width:100%">
+				        	<div class="meter">
+				  				<span style="width: {{missionOrientationScore}}%;"></span>
+				  				<span style="width: 50%;"></span>
+							</div>
+				        </td>
+				      </tr>
+				      <tr>
+				        <td>Operational Capacity</td>
+				        <td style="width:100%">
+				        	<div class="meter">
+				  				<span style="width: {{operationalCapacityScore}}%;"></span>
+				  				<span style="width: 50%;"></span>
+							</div>
+				        </td>
+				      </tr>
+				      <tr>
+				        <td>Staff Management</td>
+				        <td style="width:100%">
+				        	<div class="meter">
+				  				<span style="width: {{staffManagementScore}}%;"></span>
+				  				<span style="width: 50%;"></span>
+							</div>
+				        </td>
+				      </tr>
+				      <tr>
+				        <td>Strategic Planning</td>
+				        <td style="width:100%">
+				        	<div class="meter">
+				  				<span style="width: {{strategicPlanningScore}}%;"></span>
+				  				<span style="width: 50%;"></span>
+							</div>
+				        </td>
+				      </tr>
+				    </tbody>
+			  </table>
 	    	<h3>Your Strengths</h3>
-	    		<p>Your first strength is X</p>
-	    		<p>Your second strength is X</p>
+	    		<p>Your first strength is {{firstStrength}}</p>
+	    		<p>Your second strength is {{secondStrength}}</p>
 
 	    	<h3>Your Weaknesses</h3>
-	    		<p>Your first weakness is X</p>
-	    		<p>Your second weakness is X</p>
+	    		<p>Your first weakness is {{firstWeakness}}</p>
+	    		<p>Your second weakness is {{secondWeakness}}</p>
 
 	    	<a href="/complete"><button class="prev-button">&lt; Back</button></a>
 	    	<a href="/thankyou"><button class="next-button">Next ></button></a>
