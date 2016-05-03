@@ -22,5 +22,11 @@ Template.home.events({
     },
     'mouseover #strategic-planning' : function() {
         $('#rollover-text').text('Strategic Planning refers to creating, following and evaluating plans for the nonprofit’s future activities.');
+    },
+    'click .logout': function(event){
+        event.preventDefault();
+        Meteor.logout();
+        Router.go('/home');
     }
-})
+});
+

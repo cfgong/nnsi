@@ -35,6 +35,7 @@ Template.login.events({
 				// 	console.log("login successful with: " + email);
 				// 	Router.go('/survey');
 				// }
+				// var currentRoute = Router.current().route.getName();
 				console.log("login successful with: " + email);
 					Router.go('/survey');
 				

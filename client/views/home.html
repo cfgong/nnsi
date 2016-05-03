@@ -99,6 +99,7 @@
 	    			<h4 id = "rollover-text" style="text-align: center">Adaptive Capacity refers to the way organizations adapt to changes in their environment.</h4>
 	    		</div>
 
+	    		{{#unless currentUser }}
 	    		<div class="buttons container">
 	    			<div class="row span6">
 	    				<a href="/register"><button class="home-button"><h3>Get Started</h3></button></a>
@@ -107,6 +108,14 @@
 	    				<a href="/login"><button class="home-button"><h3>Log In</h3></button></a>
 	    			</div>
 	    		</div>
+	    		{{/unless}}
+	    		{{#if currentUser }}
+	    			<div class="buttons container">
+	    			<div class="row span12">
+	    				<a><button class="home-button logout"><h3>Log Out</h3></button></a>
+	    			</div>
+	    		</div>
+				{{/if}}
 	    		{{> footer}}
 	    	</div>
 	    </template>
