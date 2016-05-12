@@ -1,6 +1,22 @@
 Origin = new Mongo.Collection("origin");
 
 
+function calculateScores(scoreArray){
+	var length = scoreArray.length;
+	var sum = 0;
+	for(var i = 0; i < scoreArray.length; i++){
+		if(scoreArray[i] != NaN){
+			if(scoreArray[i] != 0 && scoreArray[i] != 0.0000001){
+				sum += (+scoreArray[i]);
+			}
+			else if (scoreArray[i] == 0 || scoreArray[i] == 0.0000001){
+				length -= 1;
+			}
+		}	
+	}
+	var avg = sum/length;
+	return avg;
+}
 
 Template.survey2.events({
 	'submit form': function(event){
@@ -147,8 +163,9 @@ Template.survey7.events({
 		Session.set("7q6", q6);
 		Session.set("7q7", q7);
 
-		var sum = (+q1) + (+q2) + (+q3) + (+q4) + (+q5) + (+q6) + (+q7);
-		var avg = sum/7;
+		var scoreArray = [q1, q2, q3, q4, q5, q6, q7];
+		var avg = calculateScores(scoreArray);
+
 		Origin.update({_id:doc._id}, {$set: {financial_management: avg} });
 		Router.go('/survey8');
 	}
@@ -205,8 +222,8 @@ Template.survey8.events({
 		Session.set("8q1", q1);
 		Session.set("8q2", q2);
 
-		var sum = (+q1) + (+q2);
-		var avg = sum/2;
+		var scoreArray = [q1, q2];
+		var avg = calculateScores(scoreArray);
 		Origin.update({_id:doc._id}, {$set: {financial_management2: avg} });
 
 		Router.go('/survey9');
@@ -249,8 +266,8 @@ Template.survey9.events({
 		Session.set("9q6", q6);
 		Session.set("9q7", q7);
 
-		var sum = (+q1) + (+q2) + (+q3) + (+q4) + (+q5) + (+q6) + (+q7);
-		var avg = sum/7;
+		var scoreArray = [q1, q2, q3, q4, q5, q6, q7];
+		var avg = calculateScores(scoreArray);
 		Origin.update({_id:doc._id}, {$set: {adaptive_capacity: avg} });
 
 		Router.go('/survey10');
@@ -316,8 +333,8 @@ Template.survey10.events({
 		Session.set("10q5", q5);
 		Session.set("10q6", q6);
 
-		var sum = (+q1) + (+q2) + (+q3) + (+q4) + (+q5) + (+q6);
-		var avg = sum/6;
+		var scoreArray = [q1, q2, q3, q4, q5, q6];
+		var avg = calculateScores(scoreArray);
 		Origin.update({_id:doc._id}, {$set: {strategic_planning: avg} });
 
 		Router.go('/survey11');
@@ -379,8 +396,8 @@ Template.survey11.events({
 		Session.set("11q6", q6);
 		Session.set("11q7", q7);
 
-		var sum = (+q1) + (+q2) + (+q3) + (+q4) + (+q5) + (+q6) + (+q7);
-		var avg = sum/7;
+		var scoreArray = [q1, q2, q3, q4, q5, q6, q7];
+		var avg = calculateScores(scoreArray);
 		Origin.update({_id:doc._id}, {$set: {external_communication: avg} });
 
 		Router.go('/survey12');
@@ -443,8 +460,8 @@ Template.survey12.events({
 		Session.set("12q4", q4);
 		Session.set("12q5", q5);
 	
-		var sum = (+q1) + (+q2) + (+q3) + (+q4) + (+q5);
-		var avg = sum/5;
+		var scoreArray = [q1, q2, q3, q4, q5];
+		var avg = calculateScores(scoreArray);
 		Origin.update({_id:doc._id}, {$set: {board_leadership: avg} });
 
 
@@ -493,8 +510,8 @@ Template.survey13.events({
 		Session.set("13q1", q1);
 		Session.set("13q2", q2);
 	
-		var sum = (+q1) + (+q2);
-		var avg = sum/2;
+		var scoreArray = [q1, q2];
+		var avg = calculateScores(scoreArray);
 		Origin.update({_id:doc._id}, {$set: {board_leadership2: avg} });
 
 		Router.go('/survey14');
@@ -533,8 +550,8 @@ Template.survey14.events({
 		Session.set("14q4", q4);
 		Session.set("14q5", q5);
 	
-		var sum = (+q1) + (+q2) + (+q3) + (+q4) + (+q5);
-		var avg = sum/5;
+		var scoreArray = [q1, q2, q3, q4, q5];
+		var avg = calculateScores(scoreArray);
 		Origin.update({_id:doc._id}, {$set: {operational_capacity: avg} });
 
 		Router.go('/survey15');
@@ -585,8 +602,8 @@ Template.survey15.events({
 		Session.set("15q3", q3);
 		Session.set("15q4", q4);
 	
-		var sum = (+q1) + (+q2) + (+q3) + (+q4);
-		var avg = sum/4;
+		var scoreArray = [q1, q2, q3, q4];
+		var avg = calculateScores(scoreArray);
 		Origin.update({_id:doc._id}, {$set: {mission_orientation: avg} });
 
 		Router.go('/survey16');
@@ -632,8 +649,8 @@ Template.survey16.events({
 		Session.set("16q3", q3);
 		Session.set("16q4", q4);
 	
-		var sum = (+q1) + (+q2) + (+q3) + (+q4);
-		var avg = sum/4;
+		var scoreArray = [q1, q2, q3, q4];
+		var avg = calculateScores(scoreArray);
 		Origin.update({_id:doc._id}, {$set: {staff_management: avg} });
 
 		Router.go('/complete');
