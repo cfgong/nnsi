@@ -61,6 +61,8 @@ Template.results.helpers({
 		adaptiveCapacity = convertToPercentage(adaptiveCapacity);
 		scores["adaptiveCapacity"] = adaptiveCapacity;
 		Session.set("adaptiveCapacity", adaptiveCapacity);
+		// Origin.update({_id:userID}, {$set: {adaptiveCapacityScore: adaptiveCapacity} });
+		// console.log("adaptiveCapacityScore is: ", adaptiveCapacity);
 		return adaptiveCapacity;
 	},
 	boardLeadershipScore: function(){
@@ -197,7 +199,8 @@ Template.results.helpers({
 
 		smallest = Math.min.apply(Math, scores3);
 		var i = scores3.indexOf(smallest);
-		name = mapping[i];
+		var name = mapping[i];
+		console.log("first weakness is: ", name);
 		return name + ". " + weaknesses[mapping2[name]];
 	},
 	secondWeakness:function(){

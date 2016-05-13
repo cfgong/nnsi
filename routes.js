@@ -29,7 +29,7 @@ Router.route('/', {
 
 Router.route('/register');
 Router.route('/logout');
-// Router.route('/login');
+Router.route('/login');
 Router.route('/deadend');
 
 Router.route('/survey',{
@@ -238,6 +238,18 @@ Router.route('/results',{
 });
 Router.route('/thankyou',{
 	onBeforeAction: function(){
+        var currentUser = Meteor.userId();
+        if(currentUser){
+            // logged-in
+            this.next();
+        } else {
+            // not logged-in
+            this.render('login');
+        }
+    }
+});
+Router.route('/accountResults',{
+    onBeforeAction: function(){
         var currentUser = Meteor.userId();
         if(currentUser){
             // logged-in

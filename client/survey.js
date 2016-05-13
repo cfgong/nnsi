@@ -224,6 +224,7 @@ Template.survey8.events({
 
 		var scoreArray = [q1, q2];
 		var avg = calculateScores(scoreArray);
+		console.log("avg is: ", avg);
 		Origin.update({_id:doc._id}, {$set: {financial_management2: avg} });
 
 		Router.go('/survey9');

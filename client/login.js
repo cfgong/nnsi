@@ -16,7 +16,7 @@ Template.login.events({
 			var isVerified = user.emails[0].verified;
 		}
 		Meteor.loginWithPassword(email, password, function(error){
-			console.log("Initiaited login process");
+			console.log("Initiated login process");
 			if(error){
 				console.log(error.reason);
 				if(error.reason=="Incorrect password"){
@@ -28,16 +28,16 @@ Template.login.events({
 				}
 			}
 			else{
-				// if(user && !isVerified){
-				// 		$("#incorrect").text("Please check your email and verify your email");
-				// 		$("#incorrect").show();
-				// }else{
-				// 	console.log("login successful with: " + email);
-				// 	Router.go('/survey');
-				// }
-				// var currentRoute = Router.current().route.getName();
-				console.log("login successful with: " + email);
+				if(user && !isVerified){
+						$("#incorrect").text("Please check your email and verify your email");
+						$("#incorrect").show();
+				}else{
+					console.log("login successful with: " + email);
 					Router.go('/survey');
+				}
+				// var currentRoute = Router.current().route.getName();
+				// console.log("login successful with: " + email);
+				// 	Router.go('/survey');
 				
 			}
 		});
