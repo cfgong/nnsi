@@ -29,18 +29,14 @@ Template.survey3.events({
 	'submit form': function(event){
 		event.preventDefault();
 		var userId = Meteor.user()._id;
+		var doc = Origin.findOne({_id: userId});
 		var a = 'Executive Director or Senior Management';
 		var b = 'Nonprofit Organization';
 		var whoareyou = $('input:radio[name=whoareyou]:checked');
 		var whoisyourorg = $('input:radio[name=whoisyourorg]:checked');
 		console.log('userid is: ' + userId);
 		if($(whoareyou).val()==a && $(whoisyourorg).val() == b){
-			Origin.insert({
-				_id: userId,
-				whoareyou: whoareyou.val(),
-				whoisyourorg: whoisyourorg.val(),
-				createdAt: new Date()
-			});
+			Origin.update({_id: doc._id}, {$set:{whoareyou: whoareyou.val(),whoisyourorg: whoisyourorg.val()}});
 			Router.go('/survey4');
 		}else{
 			Router.go('/deadend');

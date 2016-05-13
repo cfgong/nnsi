@@ -28,13 +28,29 @@ Template.login.events({
 				}
 			}
 			else{
-				if(user && !isVerified){
-						$("#incorrect").text("Please check your email and verify your email");
-						$("#incorrect").show();
-				}else{
+				// if(user && !isVerified){
+				// 		$("#incorrect").text("Please check your email and verify your email");
+				// 		$("#incorrect").show();
+				// }else{
 					console.log("login successful with: " + email);
-					Router.go('/survey');
-				}
+					if( Origin.find({_id:user._id})){
+						console.log("user alrdy exists in DB");
+					}else{
+						Origin.insert({
+							_id: user._id,
+							createdAt: new Date()
+						});
+						console.log("inserted user in dB");
+					}
+					
+					isComplete = Origin.find( {$and: [{_id:user._id},{isCompleted:true}] }).fetch()[0]["isCompleted"];
+					console.log("isComplete: ", isComplete);
+					if(isComplete == true){
+						Router.go('/results');
+					}else{
+						Router.go('/survey');
+					}
+				// }
 				// var currentRoute = Router.current().route.getName();
 				// console.log("login successful with: " + email);
 				// 	Router.go('/survey');

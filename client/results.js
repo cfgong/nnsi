@@ -50,7 +50,6 @@ var scores2 = [];
 var scores3 = [];
 var scores4 = [];
 Template.results.helpers({
-
 	adaptiveCapacityScore: function(){
 		userID = Meteor.user()._id;
 		adaptiveCapacity = Origin.find( {$or: [{_id:userID},{adaptive_capacity:true}] }).fetch()[0]["adaptive_capacity"];
@@ -198,8 +197,11 @@ Template.results.helpers({
 		scores3.push(Session.get("strategicPlanning"));
 
 		smallest = Math.min.apply(Math, scores3);
+		console.log("smallest is: ", smallest);
 		var i = scores3.indexOf(smallest);
+		console.log("i is: ", i);
 		var name = mapping[i];
+		console.log("name is: ", name);
 		console.log("first weakness is: ", name);
 		return name + ". " + weaknesses[mapping2[name]];
 	},
