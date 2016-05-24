@@ -13,6 +13,15 @@ var classifications = {
 	"social" :11
 };
 
+// var locations = {
+// 	"Asia": 0,
+// 	"North America": 1,
+// 	"Europe": 3, 
+// 	"Africa": 5, 
+// 	"South America": 5,
+// 	"Australia/Oceania": 6
+// }
+
 var percentiles = {
 	// classification = 0, revenue = 1, location = 2
 	"Adaptive Capacity" : [
@@ -73,12 +82,13 @@ Template.results.helpers({
 		return convertToPercentage(lookup);
 	},
 	adaptiveCapacityLocationScore: function(){
-		// userID = Meteor.user()._id;
-		// location = Origin.find( {$or: [{_id:userID},{revenue:true}] }).fetch()[0]["revenue"];
-		// index = getRevenueSize(revenue);
-		// var lookup = percentiles["Adaptive Capacity"][2][index];
-		// return convertToPercentage(lookup);
+		userID = Meteor.user()._id;
+		var location = Origin.find( {$or: [{_id:userID},{primaryAddress:true}] }).fetch()[0]["primaryAddress"];
+		var index = getLocationIndex(location);
+		var lookup = percentiles["Adaptive Capacity"][2][index];
+		return convertToPercentage(lookup);
 	},
+
 	boardLeadershipClassificationScore: function(){
 		userID = Meteor.user()._id;
 		classification = Origin.find( {$or: [{_id:userID},{organizational_classification:true}] }).fetch()[0]["organizational_classification"];
@@ -93,8 +103,13 @@ Template.results.helpers({
 		return convertToPercentage(lookup);
 	},
 	boardLeadershipLocationScore: function(){
-
+		userID = Meteor.user()._id;
+		var location = Origin.find( {$or: [{_id:userID},{primaryAddress:true}] }).fetch()[0]["primaryAddress"];
+		var index = getLocationIndex(location);
+		var lookup = percentiles["Board Leadership"][2][index];
+		return convertToPercentage(lookup);
 	},
+
 	externalCommunicationClassificationScore: function(){
 		userID = Meteor.user()._id;
 		classification = Origin.find( {$or: [{_id:userID},{organizational_classification:true}] }).fetch()[0]["organizational_classification"];
@@ -109,8 +124,13 @@ Template.results.helpers({
 		return convertToPercentage(lookup);
 	},
 	externalCommunicationLocationScore: function(){
-
+		userID = Meteor.user()._id;
+		var location = Origin.find( {$or: [{_id:userID},{primaryAddress:true}] }).fetch()[0]["primaryAddress"];
+		var index = getLocationIndex(location);
+		var lookup = percentiles["External Communication"][2][index];
+		return convertToPercentage(lookup);
 	},
+
 	financialManagementClassificationScore: function(){
 		userID = Meteor.user()._id;
 		classification = Origin.find( {$or: [{_id:userID},{organizational_classification:true}] }).fetch()[0]["organizational_classification"];
@@ -125,8 +145,13 @@ Template.results.helpers({
 		return convertToPercentage(lookup);
 	},
 	financialManagementLocationScore: function(){
-
+		userID = Meteor.user()._id;
+		var location = Origin.find( {$or: [{_id:userID},{primaryAddress:true}] }).fetch()[0]["primaryAddress"];
+		var index = getLocationIndex(location);
+		var lookup = percentiles["Financial Management"][2][index];
+		return convertToPercentage(lookup);
 	},
+
 	missionOrientationClassificationScore: function(){
 		userID = Meteor.user()._id;
 		classification = Origin.find( {$or: [{_id:userID},{organizational_classification:true}] }).fetch()[0]["organizational_classification"];
@@ -141,8 +166,13 @@ Template.results.helpers({
 		return convertToPercentage(lookup);
 	},
 	missionOrientationLocationScore: function(){
-
+		userID = Meteor.user()._id;
+		var location = Origin.find( {$or: [{_id:userID},{primaryAddress:true}] }).fetch()[0]["primaryAddress"];
+		var index = getLocationIndex(location);
+		var lookup = percentiles["Mission Orientation"][2][index];
+		return convertToPercentage(lookup);
 	},
+
 	operationalCapacityClassificationScore: function(){
 		userID = Meteor.user()._id;
 		classification = Origin.find( {$or: [{_id:userID},{organizational_classification:true}] }).fetch()[0]["organizational_classification"];
@@ -157,8 +187,13 @@ Template.results.helpers({
 		return convertToPercentage(lookup);
 	},
 	operationalCapacityLocationScore: function(){
-
+		userID = Meteor.user()._id;
+		var location = Origin.find( {$or: [{_id:userID},{primaryAddress:true}] }).fetch()[0]["primaryAddress"];
+		var index = getLocationIndex(location);
+		var lookup = percentiles["Operational Capacity"][2][index];
+		return convertToPercentage(lookup);
 	},
+
 	staffManagementClassificationScore: function(){
 		userID = Meteor.user()._id;
 		classification = Origin.find( {$or: [{_id:userID},{organizational_classification:true}] }).fetch()[0]["organizational_classification"];
@@ -173,8 +208,13 @@ Template.results.helpers({
 		return convertToPercentage(lookup);
 	},
 	staffManagementLocationScore: function(){
-
+		userID = Meteor.user()._id;
+		var location = Origin.find( {$or: [{_id:userID},{primaryAddress:true}] }).fetch()[0]["primaryAddress"];
+		var index = getLocationIndex(location);
+		var lookup = percentiles["Staff Management"][2][index];
+		return convertToPercentage(lookup);
 	},
+
 	strategicPlanningClassificationScore: function(){
 		userID = Meteor.user()._id;
 		classification = Origin.find( {$or: [{_id:userID},{organizational_classification:true}] }).fetch()[0]["organizational_classification"];
@@ -189,7 +229,11 @@ Template.results.helpers({
 		return convertToPercentage(lookup);
 	},
 	strategicPlanningLocationScore: function(){
-
+		userID = Meteor.user()._id;
+		var location = Origin.find( {$or: [{_id:userID},{primaryAddress:true}] }).fetch()[0]["primaryAddress"];
+		var index = getLocationIndex(location);
+		var lookup = percentiles["Strategic Planning"][2][index];
+		return convertToPercentage(lookup);
 	}
 })
 
@@ -210,6 +254,23 @@ function getRevenueSize(revenue){
 		return 4;
 	}
 	return 0;
+}
+
+function getLocationIndex(location){
+	if (location == "Asia"){
+		return 0;
+	}else if (location == "North America"){
+		return 1;
+	}
+	else if (location == "Europe"){
+		return 3;
+	}
+	else if(location == "Australia/Oceania"){
+		return -1;
+	}
+	else{
+		return 5;
+	}
 }
 
 function convertToPercentage(arg){

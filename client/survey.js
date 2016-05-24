@@ -89,14 +89,12 @@ Template.survey5.events({
 		var budget = $('input:text[name=budget]').val();
 		var revenue = $('input:text[name=revenue]').val();
 		var assets = $('input:text[name=assets]').val();
-		var currency = $('input:text[name=currency]').val();
 
 		Session.set("budget", budget);
 		Session.set("revenue", revenue);
 		Session.set("assets", assets);
-		Session.set("currency", currency);
 
-		Origin.update({_id:doc._id}, {$set:{budget: budget, revenue: revenue, assets: assets, currency: currency} });
+		Origin.update({_id:doc._id}, {$set:{budget: budget, revenue: revenue, assets: assets} });
 		Router.go('/survey6');
 	}
 });

@@ -29,7 +29,6 @@
 				        <td style="width:100%">
 				        	<div class="meter">
 				  				<span style="width: {{adaptiveCapacityScore}}%;">
-				  					<!-- <p style="text-align:right; margin-left:20px;">{{adaptiveCapacityScore}}</p> -->
 				  				</span>
 							</div>
 				        </td>
@@ -95,6 +94,21 @@
 
 
 	    	<h3>How You Compare:</h3>
+	    		<p>Legend</p>
+	    		<ul id="percentileLegend">
+				  <li>
+				  	<div style="height:20px; width: 60%;background-color:#FCFFF5"> Raw Score</div>
+				  </li>
+				  <li>
+				  	<div style="height:20px;width: 60%;background-color:#D1DBBD"> Classification Score</div>
+				  </li>
+				  <li>
+				  	<div style="height:20px; width: 60%;background-color:#91AA9D"> Revenue Score</div>	
+				  </li>
+				  <li>
+				  	<div style="height:20px; width: 60%;background-color:#3E606F"> Location Score</div>
+				  </li>
+				</ul>  
 	    		<table class="table table-striped compare">
 				    <thead>
 				      <tr>
@@ -108,10 +122,10 @@
 				        <td>Adaptive Capacity</td>
 				        <td style="width:100%">
 				        	<div class="meter">
-				  				<span style="width: {{adaptiveCapacityScore}}%;"></span>
-				  				<span style="width: {{adaptiveCapacityClassificationScore}}%;"></span>
-				  				<span style="width: {{adaptiveCapacityRevenueScore}}%;"></span>
-				  				<span style="width: {{adaptiveCapacityLocationScore}}%;"></span>
+				  				<span style="width: {{adaptiveCapacityScore}}%;background-color:#FCFFF5"></span>
+				  				<span style="width: {{adaptiveCapacityClassificationScore}}%; background-color: #D1DBBD "></span>
+				  				<span style="width: {{adaptiveCapacityRevenueScore}}%; background-color: #91AA9D"></span>
+				  				<span style="width: {{adaptiveCapacityLocationScore}}%; background-color: #3E606F"></span>
 							</div>
 				        </td>
 				      </tr>
@@ -119,10 +133,10 @@
 				        <td>Board Leadership</td>
 				        <td style="width:100%">
 				        	<div class="meter">
-				  				<span style="width: {{boardLeadershipScore}}%;"></span>
-				  				<span style="width: {{boardLeadershipClassificationScore}}%;"></span>
-				  				<span style="width: {{boardLeadershipRevenueScore}}%;"></span>
-				  				<span style="width: {{boardLeadershipLocationScore}}%;"></span>
+				  				<span style="width: {{boardLeadershipScore}}%;background-color:#FCFFF5"></span>
+				  				<span style="width: {{boardLeadershipClassificationScore}}%;background-color: #D1DBBD"></span>
+				  				<span style="width: {{boardLeadershipRevenueScore}}%;background-color: #91AA9D"></span>
+				  				<span style="width: {{boardLeadershipLocationScore}}%;background-color: #3E606F"></span>
 							</div>
 				        </td>
 				      </tr>
@@ -130,10 +144,10 @@
 				        <td>External Communication</td>
 				        <td style="width:100%">
 				        	<div class="meter">
-				  				<span style="width: {{externalCommunicationScore}}%;"></span>
-				  				<span style="width: {{externalCommunicationClassificationScore}}%;"></span>
-				  				<span style="width: {{externalCommunicationRevenueScore}}%;"></span>
-				  				<span style="width: {{externalCommunicationLocationScore}}%;"></span>
+				  				<span style="width: {{externalCommunicationScore}}%;background-color:#FCFFF5"></span>
+				  				<span style="width: {{externalCommunicationClassificationScore}}%;background-color: #D1DBBD"></span>
+				  				<span style="width: {{externalCommunicationRevenueScore}}%;background-color: #91AA9D"></span>
+				  				<span style="width: {{externalCommunicationLocationScore}}%;background-color: #3E606F"></span>
 							</div>
 				        </td>
 				      </tr>
@@ -141,10 +155,10 @@
 				        <td>Financial Management</td>
 				        <td style="width:100%">
 				        	<div class="meter">
-				  				<span style="width: {{financialManagementScore}}%;"></span>
-				  				<span style="width: {{financialManagementClassificationScore}}%;"></span>
-				  				<span style="width: {{financialManagementRevenueScore}}%;"></span>
-				  				<span style="width: {{financialManagementLocationScore}}%;"></span>
+				  				<span style="width: {{financialManagementScore}}%;background-color:#FCFFF5"></span>
+				  				<span style="width: {{financialManagementClassificationScore}}%;background-color: #D1DBBD"></span>
+				  				<span style="width: {{financialManagementRevenueScore}}%;background-color: #91AA9D"></span>
+				  				<span style="width: {{financialManagementLocationScore}}%;background-color: #3E606F"></span>
 							</div>
 				        </td>
 				      </tr>
@@ -152,10 +166,10 @@
 				        <td>Mission Orientation</td>
 				        <td style="width:100%">
 				        	<div class="meter">
-				  				<span style="width: {{missionOrientationScore}}%;"></span>
-				  				<span style="width: {{missionOrientationClassificationScore}}%;"></span>
-				  				<span style="width: {{missionOrientationRevenueScore}}%;"></span>
-				  				<span style="width: {{missionOrientationLocationScore}}%;"></span>
+				  				<span style="width: {{missionOrientationScore}}%;background-color:#FCFFF5"></span>
+				  				<span style="width: {{missionOrientationClassificationScore}}%;background-color: #D1DBBD"></span>
+				  				<span style="width: {{missionOrientationRevenueScore}}%;background-color: #91AA9D"></span>
+				  				<span style="width: {{missionOrientationLocationScore}}%;background-color: #3E606F"></span>
 							</div>
 				        </td>
 				      </tr>
@@ -163,10 +177,10 @@
 				        <td>Operational Capacity</td>
 				        <td style="width:100%">
 				        	<div class="meter">
-				  				<span style="width: {{operationalCapacityScore}}%;"></span>
-				  				<span style="width: {{operationalCapacityClassificationScore}}%;"></span>
-				  				<span style="width: {{operationalCapacityRevenueScore}}%;"></span>
-				  				<span style="width: {{operationalCapacityLocationScore}}%;"></span>
+				  				<span style="width: {{operationalCapacityScore}}%;background-color:#FCFFF5"></span>
+				  				<span style="width: {{operationalCapacityClassificationScore}}%;background-color: #D1DBBD"></span>
+				  				<span style="width: {{operationalCapacityRevenueScore}}%;background-color: #91AA9D"></span>
+				  				<span style="width: {{operationalCapacityLocationScore}}%;background-color: #3E606F"></span>
 							</div>
 				        </td>
 				      </tr>
@@ -174,10 +188,10 @@
 				        <td>Staff Management</td>
 				        <td style="width:100%">
 				        	<div class="meter">
-				  				<span style="width: {{staffManagementScore}}%;"></span>
-				  				<span style="width: {{staffManagementClassificationScore}}%;"></span>
-				  				<span style="width: {{staffManagementRevenueScore}}%;"></span>
-				  				<span style="width: {{staffManagementLocationScore}}%;"></span>
+				  				<span style="width: {{staffManagementScore}}%;background-color:#FCFFF5"></span>
+				  				<span style="width: {{staffManagementClassificationScore}}%;background-color: #D1DBBD"></span>
+				  				<span style="width: {{staffManagementRevenueScore}}%;background-color: #91AA9D"></span>
+				  				<span style="width: {{staffManagementLocationScore}}%;background-color: #3E606F"></span>
 							</div>
 				        </td>
 				      </tr>
@@ -185,15 +199,16 @@
 				        <td>Strategic Planning</td>
 				        <td style="width:100%">
 				        	<div class="meter">
-				  				<span style="width: {{strategicPlanningScore}}%;"></span>
-				  				<span style="width: {{strategicPlanningClassificationScore}}%;"></span>
-				  				<span style="width: {{strategicPlanningRevenueScore}}%;"></span>
-				  				<span style="width: {{strategicPlanningLocationScore}}%;"></span>
+				  				<span style="width: {{strategicPlanningScore}}%;background-color:#FCFFF5"></span>
+				  				<span style="width: {{strategicPlanningClassificationScore}}%;background-color: #D1DBBD"></span>
+				  				<span style="width: {{strategicPlanningRevenueScore}}%;background-color: #91AA9D"></span>
+				  				<span style="width: {{strategicPlanningLocationScore}}%;background-color: #3E606F"></span>
 							</div>
 				        </td>
 				      </tr>
 				    </tbody>
 			  </table>
+			  <a href="/howCalculated">See how these scores were calculated.</a>
 	    	<h3>Your Strengths</h3>
 	    		<p>Your first strength is {{firstStrength}}</p>
 	    		<p>Your second strength is {{secondStrength}}</p>

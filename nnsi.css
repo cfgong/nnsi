@@ -24,7 +24,11 @@ footer p{
 }
 
 .compare .meter > span{
-	height: 50%;
+	height: 45%;
+	top: -6px;
+}
+ul#percentileLegend li {
+    display:inline;
 }
 .black {
 	color: black;

@@ -30,3 +30,9 @@ Template.home.events({
     }
 });
 
+
+Template.home.helpers({
+    getEmail: function(){
+        return Meteor.user().emails[0].address;
+    }
+})

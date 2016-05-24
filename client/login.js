@@ -34,7 +34,7 @@ Template.login.events({
 				// }else{
 					console.log("login successful with: " + email);
 					if( Origin.find({_id:user._id})){
-						console.log("user alrdy exists in DB");
+						console.log("user alrdy exists in DB: ", user._id);
 					}else{
 						Origin.insert({
 							_id: user._id,
@@ -42,9 +42,10 @@ Template.login.events({
 						});
 						console.log("inserted user in dB");
 					}
-					
+					// console.log("this should be false: ", Origin.find( {$and: [{_id:user._id},{isCompleted:true}] }) == true);
 					isComplete = Origin.find( {$and: [{_id:user._id},{isCompleted:true}] }).fetch()[0]["isCompleted"];
-					console.log("isComplete: ", isComplete);
+					// console.log("isComplete: ", Origin.find( {$and: [{_id:user._id},{isCompleted:true}] }).fetch()[0]["isCompleted"]);
+					// console.log("isComplete: ", isComplete);
 					if(isComplete == true){
 						Router.go('/results');
 					}else{

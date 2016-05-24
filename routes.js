@@ -270,4 +270,5 @@ Router.route('/externalCommunication');
 Router.route('/staffManagement');
 Router.route('/strategicPlanning');
 Router.route('/boardLeadership');
+Router.route('/howCalculated');
 
