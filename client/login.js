@@ -1,3 +1,4 @@
+
 Template.logout.events({
 	'click .logout': function(event){
 		event.preventDefault();
@@ -32,25 +33,18 @@ Template.login.events({
 				// 		$("#incorrect").text("Please check your email and verify your email");
 				// 		$("#incorrect").show();
 				// }else{
-					console.log("login successful with: " + email);
-					if( Origin.find({_id:user._id})){
-						console.log("user alrdy exists in DB: ", user._id);
-					}else{
-						Origin.insert({
-							_id: user._id,
-							createdAt: new Date()
-						});
-						console.log("inserted user in dB");
-					}
-					// console.log("this should be false: ", Origin.find( {$and: [{_id:user._id},{isCompleted:true}] }) == true);
-					isComplete = Origin.find( {$and: [{_id:user._id},{isCompleted:true}] }).fetch()[0]["isCompleted"];
-					// console.log("isComplete: ", Origin.find( {$and: [{_id:user._id},{isCompleted:true}] }).fetch()[0]["isCompleted"]);
-					// console.log("isComplete: ", isComplete);
-					if(isComplete == true){
+					// console.log("login successful with: " + email);
+					if(user == undefined){
+						$(".login").submit();
+					}					
+
+					isComplete = Origin.find( {$and: [{_id:user._id}]}).fetch()[0]["isCompleted"];
+					if (isComplete){
 						Router.go('/results');
 					}else{
 						Router.go('/survey');
 					}
+					// console.log("isComplete: ", isComplete.fetch()[0]["isCompleted"]);
 				// }
 				// var currentRoute = Router.current().route.getName();
 				// console.log("login successful with: " + email);

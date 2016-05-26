@@ -17,10 +17,21 @@ Template.register.events({
 			password: password,
 			confirmpassword: confirmpassword
 		}, function(error){
+			var userId = Meteor.user()._id;
 			if(error){
 				console.log(error.reason);
+				Origin.insert({
+					_id: userId,
+					createdAt: new Date(),
+					isCompleted: false
+				});	
 				Router.go('/login');
 			}else{
+				Origin.insert({
+					_id: userId,
+					createdAt: new Date(),
+					isCompleted: false
+				});	
 				Router.go('/login');
 			}
 		});
