@@ -2,6 +2,8 @@
 
 This uses a meteor stack with a mongoDB backend. (https://www.meteor.com/)
 
+Structure of the app
+
 /client
 
     /resourceLibrary
@@ -32,3 +34,10 @@ nnsi.css has all the styling
 routes.js has all the routing
 
   
+How to develop locally:
+
+    - run the command "meteor" while in the project directory
+    
+How to deploy to modulus:
+    
+    - run the command "modulus deploy" while in the project directory
