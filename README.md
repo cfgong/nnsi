@@ -4,13 +4,13 @@ This uses a meteor stack with a mongoDB backend. (https://www.meteor.com/)
 
 /client
 
-  /resourceLibrary
+    /resourceLibrary
   
     - contains the text for all the resource library text
-  /surveys
+    /surveys
   
     - contains the frontend for the survey pages
-  /views
+    /views
   
     - more frontend pages
     
@@ -18,11 +18,11 @@ This uses a meteor stack with a mongoDB backend. (https://www.meteor.com/)
   
 /public
 
-  /General
+    /General
   
-  /Homepage
+    /Homepage
   
-  /MainIcons
+    /MainIcons
   
     - all contain images
 
