@@ -3,3 +3,7 @@ Notes
 
 -there is a mongo collection named Origin (defined in collections.js)
 -go to see the collection, go to the web console and type "Origin"
+
+-login does not work 
+
+http://meteortips.com/first-meteor-tutorial/databases-part-1/
