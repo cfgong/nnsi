@@ -1,4 +1,5 @@
 Notes
+-run the site from a not Chrome and not Firefox browser
 
 -there is a mongo collection named Origin (defined in collections.js)
 -go to see the collection, go to the web console and type "Origin"
