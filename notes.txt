@@ -7,3 +7,7 @@ Notes
 -login does not work 
 
 http://meteortips.com/first-meteor-tutorial/databases-part-1/
+
+Problem with creating a user:
+After entering in user information, we can't go next
+Exception in delivering result of invoking 'createUser': TypeError: Unable to get property '_id' of undefined or null reference
