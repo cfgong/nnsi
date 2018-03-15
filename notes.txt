@@ -1,13 +1,8 @@
 Notes
--run the site from a not Chrome and not Firefox browser
 
 -there is a mongo collection named Origin (defined in collections.js)
 -go to see the collection, go to the web console and type "Origin"
 
--login does not work 
+-login and registration authetication has been currently disabled
 
 http://meteortips.com/first-meteor-tutorial/databases-part-1/
-
-Problem with creating a user:
-After entering in user information, we can't go next
-Exception in delivering result of invoking 'createUser': TypeError: Unable to get property '_id' of undefined or null reference
