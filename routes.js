@@ -34,6 +34,8 @@ Router.route('/deadend');
 
 Router.route('/survey',{
 	onBeforeAction: function(){
+        this.next();
+        /**
         var currentUser = Meteor.userId();
         if(currentUser){
             // logged-in
@@ -42,10 +44,13 @@ Router.route('/survey',{
             // not logged-in
             this.render('login');
         }
+        **/
     }
 });
 Router.route('/survey3',{
 	onBeforeAction: function(){
+        this.next();
+        /**
         var currentUser = Meteor.userId();
         if(currentUser){
             // logged-in
@@ -54,10 +59,13 @@ Router.route('/survey3',{
             // not logged-in
             this.render('login');
         }
+        **/
     }
 });
 Router.route('/survey4',{
 	onBeforeAction: function(){
+        this.next();
+        /**
         var currentUser = Meteor.userId();
         if(currentUser){
             // logged-in
@@ -66,10 +74,13 @@ Router.route('/survey4',{
             // not logged-in
             this.render('login');
         }
+        **/
     }
 });
 Router.route('/survey5',{
 	onBeforeAction: function(){
+        this.next();
+        /**
         var currentUser = Meteor.userId();
         if(currentUser){
             // logged-in
@@ -78,10 +89,13 @@ Router.route('/survey5',{
             // not logged-in
             this.render('login');
         }
+        **/
     }
 });
 Router.route('/survey6',{
 	onBeforeAction: function(){
+        this.next();
+        /**
         var currentUser = Meteor.userId();
         if(currentUser){
             // logged-in
@@ -90,10 +104,13 @@ Router.route('/survey6',{
             // not logged-in
             this.render('login');
         }
+        **/
     }
 });
 Router.route('/survey7',{
 	onBeforeAction: function(){
+        this.next();
+        /**
         var currentUser = Meteor.userId();
         if(currentUser){
             // logged-in
@@ -102,10 +119,13 @@ Router.route('/survey7',{
             // not logged-in
             this.render('login');
         }
+        **/
     }
 });
 Router.route('/survey8',{
 	onBeforeAction: function(){
+        this.next();
+        /**
         var currentUser = Meteor.userId();
         if(currentUser){
             // logged-in
@@ -114,10 +134,13 @@ Router.route('/survey8',{
             // not logged-in
             this.render('login');
         }
+        **/
     }
 });
 Router.route('/survey9',{
 	onBeforeAction: function(){
+        this.next();
+        /**
         var currentUser = Meteor.userId();
         if(currentUser){
             // logged-in
@@ -126,10 +149,13 @@ Router.route('/survey9',{
             // not logged-in
             this.render('login');
         }
+        **/
     }
 });
 Router.route('/survey10',{
 	onBeforeAction: function(){
+        this.next();
+        /**
         var currentUser = Meteor.userId();
         if(currentUser){
             // logged-in
@@ -138,10 +164,13 @@ Router.route('/survey10',{
             // not logged-in
             this.render('login');
         }
+        **/
     }
 });
 Router.route('/survey11',{
 	onBeforeAction: function(){
+        this.next();
+        /**
         var currentUser = Meteor.userId();
         if(currentUser){
             // logged-in
@@ -150,10 +179,13 @@ Router.route('/survey11',{
             // not logged-in
             this.render('login');
         }
+        **/
     }
 });
 Router.route('/survey12',{
 	onBeforeAction: function(){
+        this.next();
+        /**
         var currentUser = Meteor.userId();
         if(currentUser){
             // logged-in
@@ -162,10 +194,13 @@ Router.route('/survey12',{
             // not logged-in
             this.render('login');
         }
+        **/
     }
 });
 Router.route('/survey13',{
 	onBeforeAction: function(){
+        this.next();
+        /**
         var currentUser = Meteor.userId();
         if(currentUser){
             // logged-in
@@ -174,10 +209,13 @@ Router.route('/survey13',{
             // not logged-in
             this.render('login');
         }
+        **/
     }
 });
 Router.route('/survey14',{
 	onBeforeAction: function(){
+        this.next();
+        /**
         var currentUser = Meteor.userId();
         if(currentUser){
             // logged-in
@@ -186,10 +224,13 @@ Router.route('/survey14',{
             // not logged-in
             this.render('login');
         }
+        **/
     }
 });
 Router.route('/survey15',{
 	onBeforeAction: function(){
+        this.next();
+        /**
         var currentUser = Meteor.userId();
         if(currentUser){
             // logged-in
@@ -198,10 +239,13 @@ Router.route('/survey15',{
             // not logged-in
             this.render('login');
         }
+        **/
     }
 });
 Router.route('/survey16',{
 	onBeforeAction: function(){
+        this.next();
+        /**
         var currentUser = Meteor.userId();
         if(currentUser){
             // logged-in
@@ -210,10 +254,13 @@ Router.route('/survey16',{
             // not logged-in
             this.render('login');
         }
+        **/
     }
 });
 Router.route('/complete',{
 	onBeforeAction: function(){
+        this.next();
+        /**
         var currentUser = Meteor.userId();
         if(currentUser){
             // logged-in
@@ -222,10 +269,13 @@ Router.route('/complete',{
             // not logged-in
             this.render('login');
         }
+        **/
     }
 });
 Router.route('/results',{
 	onBeforeAction: function(){
+        this.next();
+        /**
         var currentUser = Meteor.userId();
         if(currentUser){
             // logged-in
@@ -234,10 +284,13 @@ Router.route('/results',{
             // not logged-in
             this.render('login');
         }
+        **/
     }
 });
 Router.route('/thankyou',{
 	onBeforeAction: function(){
+        this.next();
+        /**
         var currentUser = Meteor.userId();
         if(currentUser){
             // logged-in
@@ -246,10 +299,13 @@ Router.route('/thankyou',{
             // not logged-in
             this.render('login');
         }
+        **/
     }
 });
 Router.route('/accountResults',{
     onBeforeAction: function(){
+        this.next();
+        /**
         var currentUser = Meteor.userId();
         if(currentUser){
             // logged-in
@@ -258,6 +314,7 @@ Router.route('/accountResults',{
             // not logged-in
             this.render('login');
         }
+        **/
     }
 });
 

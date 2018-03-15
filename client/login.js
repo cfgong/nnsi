@@ -17,7 +17,9 @@ Template.login.events({
 			var isVerified = user.emails[0].verified;
 		}
 		Meteor.loginWithPassword(email, password, function(error){
-			console.log("Initiated login process");
+			Router.go('/survey');
+			//console.log("Initiated login process");
+			/**
 			if(error){
 				console.log(error.reason);
 				if(error.reason=="Incorrect password"){
@@ -50,7 +52,8 @@ Template.login.events({
 				// console.log("login successful with: " + email);
 				// 	Router.go('/survey');
 				
-			}
+			}**/
+
 		});
 	}
 });

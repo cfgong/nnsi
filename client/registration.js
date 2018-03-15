@@ -11,6 +11,7 @@ Template.register.events({
 		console.log("org is " + organization);
 		console.log("pw is " + password);
 		console.log("2ndpw is " + confirmpassword);
+		/**
 		Accounts.createUser({
 			email:email,
 			organization: organization,
@@ -35,7 +36,8 @@ Template.register.events({
 				Router.go('/login');
 			}
 		});
-		//Router.go('/survey');
+		**/
+		Router.go('/survey');
 	}
 });
 
