@@ -28,15 +28,15 @@ Template.survey2.events({
 Template.survey3.events({
 	'submit form': function(event){
 		event.preventDefault();
-		var userId = Meteor.user()._id;
-		var doc = Origin.findOne({_id: userId});
+		var userId = Meteor.user(); //var userId = Meteor.user()._id;
+		var doc = Origin.findOne(userId);  //findOne({_id: userId});
 		var a = 'Executive Director or Senior Management';
 		var b = 'Nonprofit Organization';
 		var whoareyou = $('input:radio[name=whoareyou]:checked');
 		var whoisyourorg = $('input:radio[name=whoisyourorg]:checked');
 		console.log('userid is: ' + userId);
 		if($(whoareyou).val()==a && $(whoisyourorg).val() == b){
-			Origin.update({_id: doc._id}, {$set:{whoareyou: whoareyou.val(),whoisyourorg: whoisyourorg.val()}});
+			Origin.update(userId, {$set:{whoareyou: whoareyou.val(),whoisyourorg: whoisyourorg.val()}});
 			Router.go('/survey4');
 		}else{
 			Router.go('/deadend');
@@ -48,8 +48,8 @@ Template.survey3.events({
 Template.survey4.events({
 	'submit form': function(event, template){
 		event.preventDefault();
-		var userId = Meteor.user()._id;
-		var doc = Origin.findOne({_id: userId});
+		var userId = Meteor.user();
+		var doc = Origin.findOne(userId);
 		var primaryAddress = $('input:radio[name=address]:checked').val();
 		var selected = template.findAll('input[type=checkbox]:checked');
 		var array = _.map(selected, function(item){
@@ -57,7 +57,7 @@ Template.survey4.events({
 		});
 		Session.set("primaryAddress",primaryAddress);
 		Session.set("selected", array);
-		Origin.update({_id: doc._id}, {$set:{primaryAddress: primaryAddress,operatingCountries: array}});
+		Origin.update(userId, {$set:{primaryAddress: primaryAddress,operatingCountries: array}});
 		Router.go('/survey5');
 	},
 });
@@ -84,8 +84,8 @@ Template.survey4.rendered = function(){
 Template.survey5.events({
 	'submit form': function(event){
 		event.preventDefault();
-		var userId = Meteor.user()._id;
-		var doc = Origin.findOne({_id: userId});
+		var userId = Meteor.user();
+		var doc = Origin.findOne(userId);
 		var budget = $('input:text[name=budget]').val();
 		var revenue = $('input:text[name=revenue]').val();
 		var assets = $('input:text[name=assets]').val();
@@ -94,7 +94,7 @@ Template.survey5.events({
 		Session.set("revenue", revenue);
 		Session.set("assets", assets);
 
-		Origin.update({_id:doc._id}, {$set:{budget: budget, revenue: revenue, assets: assets} });
+		Origin.update(userId, {$set:{budget: budget, revenue: revenue, assets: assets} });
 		Router.go('/survey6');
 	}
 });
@@ -117,13 +117,13 @@ Template.survey5.helpers({
 Template.survey6.events({
 	'submit form': function(event){
 		event.preventDefault();
-		var userId = Meteor.user()._id;
-		var doc = Origin.findOne({_id: userId});
+		var userId = Meteor.user();
+		var doc = Origin.findOne(userId);
 		var organization_classification = $('input:radio[name=organizational_classification]:checked').val();
 
 		Session.set("organization_classification", organization_classification);
 
-		Origin.update({_id:doc._id}, {$set: {organizational_classification: organization_classification} });
+		Origin.update(userId, {$set: {organizational_classification: organization_classification} });
 		Router.go('/survey7');
 	}
 });
@@ -139,8 +139,8 @@ Template.survey6.rendered = function(){
 Template.survey7.events({
 	'submit form': function(event){
 		event.preventDefault();
-		var userId = Meteor.user()._id;
-		var doc = Origin.findOne({_id: userId});
+		var userId = Meteor.user();
+		var doc = Origin.findOne(userId);
 		var q1 = $('input:radio[name=inlineRadioOptions]:checked').val();
 		var q2 = $('input:radio[name=inlineRadioOptions2]:checked').val();
 		var q3 = $('input:radio[name=inlineRadioOptions3]:checked').val();
@@ -160,7 +160,7 @@ Template.survey7.events({
 		var scoreArray = [q1, q2, q3, q4, q5, q6, q7];
 		var avg = calculateScores(scoreArray);
 
-		Origin.update({_id:doc._id}, {$set: {financial_management: avg} });
+		Origin.update(userId, {$set: {financial_management: avg} });
 		Router.go('/survey8');
 	}
 });
@@ -207,8 +207,8 @@ Template.survey7.rendered = function(){
 Template.survey8.events({
 	'submit form': function(event){
 		event.preventDefault();
-		var userId = Meteor.user()._id;
-		var doc = Origin.findOne({_id: userId});
+		var userId = Meteor.user();
+		var doc = Origin.findOne(userId);
 
 		var q1 = $('input:radio[name=inlineRadioOptions]:checked').val();
 		var q2 = $('input:radio[name=inlineRadioOptions2]:checked').val();
@@ -219,7 +219,7 @@ Template.survey8.events({
 		var scoreArray = [q1, q2];
 		var avg = calculateScores(scoreArray);
 		console.log("avg is: ", avg);
-		Origin.update({_id:doc._id}, {$set: {financial_management2: avg} });
+		Origin.update(userId, {$set: {financial_management2: avg} });
 
 		Router.go('/survey9');
 	}
@@ -242,9 +242,8 @@ Template.survey8.rendered = function(){
 Template.survey9.events({
 	'submit form': function(event){
 		event.preventDefault();
-		var userId = Meteor.user()._id;
-		var doc = Origin.findOne({_id: userId});
-
+		var userId = Meteor.user();
+		var doc = Origin.findOne(userId);
 		var q1 = $('input:radio[name=inlineRadioOptions]:checked').val();
 		var q2 = $('input:radio[name=inlineRadioOptions2]:checked').val();
 		var q3 = $('input:radio[name=inlineRadioOptions3]:checked').val();
@@ -263,7 +262,7 @@ Template.survey9.events({
 
 		var scoreArray = [q1, q2, q3, q4, q5, q6, q7];
 		var avg = calculateScores(scoreArray);
-		Origin.update({_id:doc._id}, {$set: {adaptive_capacity: avg} });
+		Origin.update(userId, {$set: {adaptive_capacity: avg} });
 
 		Router.go('/survey10');
 	}
@@ -311,8 +310,8 @@ Template.survey9.rendered = function(){
 Template.survey10.events({
 	'submit form': function(event){
 		event.preventDefault();
-		var userId = Meteor.user()._id;
-		var doc = Origin.findOne({_id: userId});
+		var userId = Meteor.user();
+		var doc = Origin.findOne(userId);
 
 		var q1 = $('input:radio[name=inlineRadioOptions]:checked').val();
 		var q2 = $('input:radio[name=inlineRadioOptions2]:checked').val();
@@ -330,7 +329,7 @@ Template.survey10.events({
 
 		var scoreArray = [q1, q2, q3, q4, q5, q6];
 		var avg = calculateScores(scoreArray);
-		Origin.update({_id:doc._id}, {$set: {strategic_planning: avg} });
+		Origin.update(userId, {$set: {strategic_planning: avg} });
 
 		Router.go('/survey11');
 	}

@@ -6,3 +6,16 @@ Notes
 -login and registration authetication has been currently disabled
 
 http://meteortips.com/first-meteor-tutorial/databases-part-1/
+
+solution for the null reference:
+delete the _id()
+using user() is enough
+
+Further improvements:
+we don't have the map on the demographic one 
+
+questions need to be implemented: 
+"Please indicate the classification that best describes your organization’s activities."
+- for the not stated textbox - if else statement here insert
+
+after survey 7 updates
