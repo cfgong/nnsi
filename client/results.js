@@ -51,7 +51,7 @@ var scores3 = [];
 var scores4 = [];
 Template.results.helpers({
 	adaptiveCapacityScore: function(){
-		userID = Meteor.user()._id;
+		userID = Meteor.userId();
 		adaptiveCapacity = Origin.find( {$or: [{_id:userID},{adaptive_capacity:true}] }).fetch()[0]["adaptive_capacity"];
 		if(isNaN(adaptiveCapacity)){
 			adaptiveCapacity = 0;
@@ -65,7 +65,7 @@ Template.results.helpers({
 		return adaptiveCapacity;
 	},
 	boardLeadershipScore: function(){
-		userID = Meteor.user()._id;
+		userID = Meteor.userId();
 		boardLeadership1 = Origin.find( {$or: [{_id:userID},{board_leadership:true}] }).fetch()[0]["board_leadership"];
 		boardLeadership2 = Origin.find( {$or: [{_id:userID},{board_leadership:true}] }).fetch()[0]["board_leadership2"];
 		boardLeadership = (boardLeadership1 + boardLeadership2)/2;
@@ -79,7 +79,7 @@ Template.results.helpers({
 		return boardLeadership;
 	},
 	externalCommunicationScore: function(){
-		userID = Meteor.user()._id;
+		userID = Meteor.userId();
 		externalCommunication = Origin.find( {$or: [{_id:userID},{external_communication:true}] }).fetch()[0]["external_communication"];
 		if(isNaN(externalCommunication)){
 			externalCommunication = 0;
@@ -91,7 +91,7 @@ Template.results.helpers({
 		return externalCommunication;
 	},
 	financialManagementScore: function(){
-		userID = Meteor.user()._id;
+		userID = Meteor.userId();
 		financialManagement1 = Origin.find( {$or: [{_id:userID},{financial_management:true}] }).fetch()[0]["financial_management"];
 		financialManagement2 = Origin.find( {$or: [{_id:userID},{financial_management:true}] }).fetch()[0]["financial_management2"];
 		financialManagement =  (financialManagement1 + financialManagement2)/2;
@@ -105,7 +105,7 @@ Template.results.helpers({
 		return financialManagement;
 	},
 	missionOrientationScore: function(){
-		userID = Meteor.user()._id;
+		userID = Meteor.userId();
 		missionOrientation = Origin.find( {$or: [{_id:userID},{mission_orientation:true}] }).fetch()[0]["mission_orientation"];
 		if(isNaN(missionOrientation)){
 			missionOrientation = 0;
@@ -117,7 +117,7 @@ Template.results.helpers({
 		return missionOrientation;
 	},
 	operationalCapacityScore: function(){
-		userID = Meteor.user()._id;
+		userID = Meteor.userId();
 		operationalCapacity = Origin.find( {$or: [{_id:userID},{operational_capacity:true}] }).fetch()[0]["operational_capacity"];
 		if(isNaN(operationalCapacity)){
 			operationalCapacity = 0;
@@ -129,7 +129,7 @@ Template.results.helpers({
 		return operationalCapacity;
 	},
 	staffManagementScore: function(){
-		userID = Meteor.user()._id;
+		userID = Meteor.userId();
 		staffManagement = Origin.find( {$or: [{_id:userID},{staff_management:true}] }).fetch()[0]["staff_management"];
 		if(isNaN(staffManagement)){
 			staffManagement = 0;
@@ -141,7 +141,7 @@ Template.results.helpers({
 		return staffManagement;
 	},
 	strategicPlanningScore: function(){
-		userID = Meteor.user()._id;
+		userID = Meteor.userId();
 		strategicPlanning = Origin.find( {$or: [{_id:userID},{strategic_planning:true}] }).fetch()[0]["strategic_planning"];
 		if(isNaN(strategicPlanning)){
 			strategicPlanning = 0;
@@ -228,7 +228,3 @@ Template.results.helpers({
 
 			// Origin.update({_id:userID}, {$set: {rawScoreAvg: avg} });
 });
-
-
-
-	

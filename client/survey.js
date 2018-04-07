@@ -28,7 +28,7 @@ Template.survey2.events({
 Template.survey3.events({
 	'submit form': function(event){
 		event.preventDefault();
-		var userId = Meteor.userId(); //var userId = Meteor.user()._id;
+		var userId = Meteor.userId(); 
 		var doc = Origin.findOne(userId);  //findOne({_id: userId});
 		var a = 'Executive Director or Senior Management';
 		var b = 'Nonprofit Organization';
