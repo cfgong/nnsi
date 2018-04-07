@@ -11,7 +11,7 @@ Template.register.events({
 		console.log("org is " + organization);
 		console.log("pw is " + password);
 		console.log("2ndpw is " + confirmpassword);
-		
+
 		Accounts.createUser({
 			email:email,
 			organization: organization,
@@ -22,23 +22,21 @@ Template.register.events({
 			if(error){
 				console.log(error.reason);
 				Origin.insert({
-					id: userId,
+					_id: userId,
 					createdAt: new Date(),
 					isCompleted: false
-				});	
+				});
 				Router.go('/login');
 			}else{
 				Origin.insert({
-					id: userId,
+					_id: userId,
 					createdAt: new Date(),
 					isCompleted: false
-				});	
+				});
 				Router.go('/login');
 			}
 		});
-	
+
 		Router.go('/survey');
 	}
 });
-
-
