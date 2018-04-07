@@ -392,7 +392,7 @@ Template.survey11.events({
 
 		var scoreArray = [q1, q2, q3, q4, q5, q6, q7];
 		var avg = calculateScores(scoreArray);
-		Origin.update({_id:doc._id}, {$set: {external_communication: avg} });
+		Origin.update(userId, {$set: {external_communication: avg} });
 
 		Router.go('/survey12');
 	}
@@ -456,7 +456,7 @@ Template.survey12.events({
 
 		var scoreArray = [q1, q2, q3, q4, q5];
 		var avg = calculateScores(scoreArray);
-		Origin.update({_id:doc._id}, {$set: {board_leadership: avg} });
+		Origin.update(userId, {$set: {board_leadership: avg} });
 
 
 		Router.go('/survey13');
@@ -506,7 +506,7 @@ Template.survey13.events({
 
 		var scoreArray = [q1, q2];
 		var avg = calculateScores(scoreArray);
-		Origin.update({_id:doc._id}, {$set: {board_leadership2: avg} });
+		Origin.update(userId, {$set: {board_leadership2: avg} });
 
 		Router.go('/survey14');
 	}
@@ -546,7 +546,7 @@ Template.survey14.events({
 
 		var scoreArray = [q1, q2, q3, q4, q5];
 		var avg = calculateScores(scoreArray);
-		Origin.update({_id:doc._id}, {$set: {operational_capacity: avg} });
+		Origin.update(userId, {$set: {operational_capacity: avg} });
 
 		Router.go('/survey15');
 	}
@@ -598,7 +598,7 @@ Template.survey15.events({
 
 		var scoreArray = [q1, q2, q3, q4];
 		var avg = calculateScores(scoreArray);
-		Origin.update({_id:doc._id}, {$set: {mission_orientation: avg} });
+		Origin.update(userId, {$set: {mission_orientation: avg} });
 
 		Router.go('/survey16');
 	}
@@ -645,7 +645,7 @@ Template.survey16.events({
 
 		var scoreArray = [q1, q2, q3, q4];
 		var avg = calculateScores(scoreArray);
-		Origin.update({_id:doc._id}, {$set: {staff_management: avg} });
+		Origin.update(userId, {$set: {staff_management: avg} });
 
 		Router.go('/complete');
 	}
