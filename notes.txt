@@ -9,7 +9,7 @@ http://meteortips.com/first-meteor-tutorial/databases-part-1/
 
 solution for the null reference:
 delete the _id()
-using user() is enough
+using userId() is enough
 
 Further improvements:
 we don't have the map on the demographic one 
@@ -18,4 +18,8 @@ questions need to be implemented:
 "Please indicate the classification that best describes your organization’s activities."
 - for the not stated textbox - if else statement here insert
 
-after survey 7 updates
+after survey 11 updates
+
+
+uncommented out user class in registration.js login.js
+can create user but can't login
