@@ -12,9 +12,9 @@ delete the _id()
 using userId() is enough
 
 Further improvements:
-we don't have the map on the demographic one 
+we don't have the map on the demographic one
 
-questions need to be implemented: 
+questions need to be implemented:
 "Please indicate the classification that best describes your organization’s activities."
 - for the not stated textbox - if else statement here insert
 
@@ -23,3 +23,7 @@ after survey 11 updates
 
 uncommented out user class in registration.js login.js
 can create user but can't login
+
+Use this user to login:
+b@gmail.com
+b

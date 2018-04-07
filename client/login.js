@@ -11,15 +11,18 @@ Template.login.events({
 	'submit form': function(event){
 		event.preventDefault();
 		var email = $('[name=email]').val();
+		console.log(email);
 		var password = $('[name=password]').val();
 		var user= Meteor.users.findOne({"emails.address": email});
+		console.log(user);
 		if(user){
 			var isVerified = user.emails[0].verified;
+			console.log(isVerified);
 		}
 		Meteor.loginWithPassword(email, password, function(error){
 			//Router.go('/survey');
 			//console.log("Initiated login process");
-			
+
 			if(error){
 				console.log(error.reason);
 				if(error.reason=="Incorrect password"){
@@ -38,9 +41,9 @@ Template.login.events({
 					// console.log("login successful with: " + email);
 					if(user == undefined){
 						$(".login").submit();
-					}					
+					}
 
-					isComplete = Origin.find( {$and: [{_id:user._id}]}).fetch()[0]["isCompleted"];
+					isComplete = Origin.find( {$and: [{_id:userId}]}).fetch()[0]["isCompleted"];
 					if (isComplete){
 						Router.go('/results');
 					}else{
@@ -51,7 +54,7 @@ Template.login.events({
 				var currentRoute = Router.current().route.getName();
 				console.log("login successful with: " + email);
 				Router.go('/survey');
-				
+
 			}
 
 		});
